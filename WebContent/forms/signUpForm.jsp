@@ -102,16 +102,16 @@ body{
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="pwOk" type="text" class="form-control" placeholder="Address" aria-describedby="basic-addon1">
+  				<input id="usrAddress" name="usrAddress" type="text" class="form-control" placeholder="Address" aria-describedby="basic-addon1">
   			</div>
   		</div>
 	</div>
 
-	<h4 class="inputLbl col-md-4 col-md-offset-4">*Contact</h4>
+	<h4 class="inputLbl col-md-4 col-md-offset-4">*Phone</h4>
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="pwOk" type="text" class="form-control" placeholder="Contact" aria-describedby="basic-addon1">
+  				<input id="usrPhone" name="usrPhone" type="text" class="form-control" placeholder="Phone" aria-describedby="basic-addon1">
   			</div>
   		</div>
 	</div>
@@ -120,7 +120,7 @@ body{
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="pwOk" type="text" class="form-control" placeholder="Gender" aria-describedby="basic-addon1">
+  				<input id="gender" name="gender" type="text" class="form-control" placeholder="Gender" aria-describedby="basic-addon1">
   			</div>
   		</div>
 	</div>
@@ -129,7 +129,7 @@ body{
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="pwOk" type="text" class="form-control" placeholder="Age" aria-describedby="basic-addon1">
+  				<input id="age" name="age" type="text" class="form-control" placeholder="Age" aria-describedby="basic-addon1">
   			</div>
   		</div>
 	</div>

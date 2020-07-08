@@ -1,15 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTPE html>
+
+
 <html>
 <head>
+
+<style type="text/css">
+div#infoField{
+	width:100%;
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+
+</style>
 <meta charset="UTF-8">
 
 </head>
 <body>
 
 <hr/>
-<div class="container">
-@@@@@ FOOTER @@@@@
+<div id="infoField" >
+
+		<div class="row">
+		
+		<div class="col-md-2">
+			<h5>ABOUT US</h5>	
+				<ul>
+					<li><a>INFORMAION</a></li>
+					<li>CONTACT</li>
+					<li>TEL</li>
+					<li>INFORMAION</li>
+			</ul>
+		</div>
+		
+		<div class="col-md-2">
+			<h5>ABOUT US</h5>	
+				<ul>
+					<li>INFORMAION</li>
+					<li>CONTACT</li>
+					<li>TEL</li>
+					<li>INFORMAION</li>
+			</ul>
+		</div>
+		
+		<div class="col-md-2">
+			<h5>ABOUT US</h5>	
+				<ul>
+					<li>INFORMAION</li>
+					<li>CONTACT</li>
+					<li>TEL</li>
+					<li>INFORMAION</li>
+			</ul>
+		</div>
+
+		
+		</div>
+	
+
+
 </div>
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

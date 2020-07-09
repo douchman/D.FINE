@@ -13,9 +13,7 @@
 우선 임시로 설정해둔 나눔명조체 
 body 전체에 걸어놨음 반드시 확인
 */
-body{
-	font-family: 'Nanum Myeongjo', serif;	
-}
+
 </style>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,11 +30,11 @@ body{
 <div id="jumbo" class="container" >
 	<jsp:include page="common/info.jsp"></jsp:include>
 </div>
-<hr/>
+
 
 <%-- index 중단 --%>
 <div class="container">
-
+<hr/>
 <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
@@ -147,8 +145,10 @@ body{
   </div>
   
 </div>
+<hr/>
 </div>
 
+<!-- 하단은 footer  -->
 
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

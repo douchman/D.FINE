@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <%-- favicon 설정 --%>
-<link href="imgs/favicon.ico" rel="shortcut icon"/>
+<link href="<%=request.getContextPath()%>/imgs/favicon.ico" rel="shortcut icon"/>
 <%-- bootstrap.css load --%>
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet">
 <%-- 폰트 : 구글 나눔 명조 --%>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
 
@@ -23,6 +23,23 @@ img#logo{
 
 nav#mainNavi{
 	background-color: rgba(245,255,250,0.7);
+}
+
+
+#nav-right-side button{
+	margin-top : 4px;
+	border: 0px;
+	background-color: inherit;
+	font-size: 12pt;
+
+}
+
+#nav-right-side button span{
+	font-size: 12pt;
+
+}
+body{
+	font-family: 'Nanum Myeongjo', serif;	
 }
 </style>
 
@@ -41,7 +58,7 @@ nav#mainNavi{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img id="logo" alt="" src="imgs/logo2.png"></a>
+      <a class="navbar-brand" href="<%=request.getContextPath()%>/index.jsp"><img id="logo" alt="" src="<%=request.getContextPath()%>/imgs/logo2.png"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,17 +72,28 @@ nav#mainNavi{
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Search</button>
+        <button type="submit" class="btn btn-default glyphicon glyphicon-search"></button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="forms/signInForm.jsp"> Sign in </a></li>
+      <ul id="nav-right-side" class="nav navbar-nav navbar-right">
+      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/sellerPage/sellerForm_Home.jsp'">
+      		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Seller Menu
+      	</button></li>
+      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/forms/signInForm.jsp'">
+      		 <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign In
+      	</button></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 </div>
 
-
+<div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>	
+</div>
 
 
 </body>

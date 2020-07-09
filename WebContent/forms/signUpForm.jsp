@@ -20,7 +20,7 @@
 
 <style type="text/css">
 
-h4{
+#wrapper h4{
 	color: #228B22;
 
 }
@@ -134,8 +134,13 @@ body{
   		</div>
 	</div>
 
-	<button type="button" class="col-md-2 col-md-offset-5 btn btn-info" aria-expanded="false">Submit</button>
-	
+	<button type="button" onclick="location.href='<%=request.getContextPath()%>/index.jsp'" class="col-md-2 col-md-offset-5 btn btn-info" aria-expanded="false">Sign Up</button>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	</div><!-- wrapper end -->
 </div><!-- container end -->
 

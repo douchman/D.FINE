@@ -11,6 +11,12 @@ div#infoField{
 	background-color: rgba(220, 220, 220, 0.4);
 }
 
+ul{
+	/* 하단 ul 시작 패딩 설정 */
+	list-style: none;
+	-webkit-padding-start:10px;
+	
+}
 
 </style>
 <meta charset="UTF-8">
@@ -18,13 +24,13 @@ div#infoField{
 </head>
 <body>
 
-<hr/>
-<div id="infoField" >
+
+<div id="infoField">
 
 		<div class="row">
 		
-		<div class="col-md-2">
-			<h5>ABOUT US</h5>	
+		<div class="col-md-1 col-md-offset-2">
+			<h4>ABOUT US</h4>	
 				<ul>
 					<li><a>INFORMAION</a></li>
 					<li>CONTACT</li>
@@ -33,23 +39,22 @@ div#infoField{
 			</ul>
 		</div>
 		
-		<div class="col-md-2">
-			<h5>ABOUT US</h5>	
+		<div class="col-md-1 col-md-offset-2" >
+			<h4>COMMUNITY</h4>	
 				<ul>
-					<li>INFORMAION</li>
-					<li>CONTACT</li>
-					<li>TEL</li>
-					<li>INFORMAION</li>
+					<li>dfine@google.shit</li>
+					<li>QnA</li>
+					<li>FAQ</li>
+					<li>Blog.naver.DFINE.com</li>
 			</ul>
 		</div>
 		
-		<div class="col-md-2">
-			<h5>ABOUT US</h5>	
+		<div class="col-md-2 col-md-offset-2">
+			<h4>CONTACT US</h4>	
 				<ul>
-					<li>INFORMAION</li>
-					<li>CONTACT</li>
-					<li>TEL</li>
-					<li>INFORMAION</li>
+					<li><h4>TEL. 02-1241-4145</h4></li>
+					<li>서울 중구 남대문로 117 다동 88 동아빌딩 15층</li>
+					<li>D:FINE Lab</li>
 			</ul>
 		</div>
 

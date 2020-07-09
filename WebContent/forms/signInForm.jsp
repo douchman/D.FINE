@@ -16,6 +16,11 @@
 
 
 <style type="text/css">
+#inForm{
+	height: 100%;
+	margin-top :50px; 
+	margin-bottom: 250px;
+}
 
 #inputField{
 	width: 30%;
@@ -27,11 +32,18 @@
 	height : 60px;
 	font-size: 20pt;
 }
+
+#btnField button{
+	width: 120px;
+	height: 60px;
+	font-size: 15pt;
+}
+
 </style>
 <title>D:FINE Sign In</title>
 </head>
 <body>
-<div align="center">
+<div id="inForm" align="center">
 	<div align="center">
 		<a href="<%=request.getContextPath()%>/index.jsp">
 			<img src="<%=request.getContextPath()%>/imgs/logo.png">
@@ -45,7 +57,7 @@
 			
 	</div>
 	
-	<div align="center">
+	<div id="btnField" align="center">
 		<div>
 			<button type="button" class="btn btn-info" aria-expanded="false" onclick="location.href='<%=request.getContextPath()%>/index.jsp'">Sign In</button>
 			<button type="button" class="btn btn-info" aria-expanded="false" onclick="location.href='<%=request.getContextPath()%>/forms/signUpForm.jsp'">Sign Up</button>

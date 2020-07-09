@@ -26,7 +26,7 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 
 	<jsp-property-group>
  		<!-- 적용 할 범위  -->
- 		<url-pattern>/sellerPage/*</url-pattern>
+ 		<url-pattern>/sellerPage/sellerForm_main.jsp</url-pattern>
  		<!-- header -->
  		<include-prelude>/common/header.jspf</include-prelude>
  		<!-- footer -->

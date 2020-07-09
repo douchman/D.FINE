@@ -6,13 +6,13 @@
 <html>
 <head>
 
-<script src="<%=request.getContextPath()%>/js/jquery-3.5.1.min.js"></script>
+
 <meta charset="UTF-8">
 
 <style>
 #sideMenu {
 	padding: 0px 15px 10px 15px;
-	background-color: rgba(173, 216, 230, 0.4);
+	background-color: rgba(173, 216, 230, 0.2);
 	line-height: 3em;
 }
 
@@ -45,26 +45,30 @@ fieldset {
 <body>
 
 	<!-- 사이드 메뉴  -->
-	<div id="sideMenu" style="float: left">
-		<h4 class="glyphicon glyphicon-align-justify">SellerMenu</h4>
+	<div id="sideMenu" style="float: left; position:fixed;">
+		<h4 class="glyphicon glyphicon-align-justify">  SellerMenu</h4>
 		<hr />
 		<ul>
-			<li><a href="#" onclick=""><span class="glyphicon glyphicon-home"
+			<li><a id="Home" href="#" onclick="getView(this.id)"><span class="glyphicon glyphicon-home"
 					aria-hidden="true"> Home</span></a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-file"
+					
+			<li><a id="Orders" href="#" onclick="getView(this.id)"><span class="glyphicon glyphicon-file"
 					aria-hidden="true"> Orders</span></a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-user"
+					
+			<li><a id="Customers" href="#" onclick="getView(this.id)"><span class="glyphicon glyphicon-user"
 					aria-hidden="true"> Customers</span></a></li>
-			<li><a href="#"><span
-					class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
-						Products</span></a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-pushpin"
-					aria-hidden="true"> Qna</span></a></li>
+					
+			<li><a id="Products" href="#" onclick="getView(this.id)"><span class="glyphicon glyphicon-shopping-cart" 
+					aria-hidden="true"> Products</span></a></li>
+					
+			<li><a id="Qnas" href="#" onclick="getView(this.id)"><span class="glyphicon glyphicon-pushpin"
+					aria-hidden="true"> QnA</span></a></li>
 
 		</ul>
 
 
 	</div>
+	
 	<!-- 뷰 필드 -->
 	<div id="sellerPage_view" class="container">
 		

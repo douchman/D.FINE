@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<script src="<%=request.getContextPath()%>/js/jquery-3.5.1.min.js"></script>
 <%-- favicon 설정 --%>
 <link href="<%=request.getContextPath()%>/imgs/favicon.ico" rel="shortcut icon"/>
 <%-- bootstrap.css load --%>
@@ -22,7 +22,7 @@ img#logo{
 }
 
 nav#mainNavi{
-	background-color: rgba(245,255,250,0.7);
+	background-color: rgba(173, 216, 230, 0.2);
 }
 
 
@@ -64,7 +64,8 @@ body{
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">women<span class="sr-only">(current)</span></a></li>
+      	<!-- class="active" -->
+        <li ><a href="#">women<span class="sr-only">(current)</span></a></li>
         <li ><a href="#">men</a></li>
         <li><a href="#">foods</a></li>
       </ul>

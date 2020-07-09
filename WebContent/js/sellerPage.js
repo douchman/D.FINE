@@ -9,4 +9,10 @@ $(document).ready(function() {
 	 * 
 	 * */
 	
+	
 });
+
+function getView(id){
+	$('#sellerPage_view').load('sellerForm_'+id+'.jsp');
+	
+}

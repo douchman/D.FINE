@@ -13,8 +13,7 @@
 <link href="<%=request.getContextPath()%>/imgs/favicon.ico" rel="shortcut icon"/>
 <%-- bootstrap.css load --%>
 <link href="<%=request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet">
-<%-- 폰트 : 구글 나눔 명조 --%>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+
 
 <title>D:FINE SIGN UP</title>
 
@@ -38,9 +37,6 @@
 }
 
 
-body{
-	font-family: 'Cairo', sans-serif;
-}
 </style>
 </head>
 <body>
@@ -65,6 +61,20 @@ body{
   			<button type="button" class="btn btn-default" aria-expanded="false">Send Mail</button>
   		</div>
   	</div>
+  	
+  	</div>
+  	<div class="row">
+	<h4 class="inputLbl col-md-4 col-md-offset-4">*Certification Number</h4>
+	<div class="input-group col-md-12">
+  		 <!--  <span class="input-group-addon" id="basic-addon1">ID(email)</span>  -->
+  		 <div class="col-md-4 col-md-offset-4">
+  			<input id="certiNum" name="certiNum"  type="text" class="form-control" placeholder="Certi Num" aria-describedby="basic-addon1">
+  		</div>
+  		<div class="col-md-1">
+  			<button type="button" class="btn btn-default" aria-expanded="false">Verify</button>
+  		</div>
+  	</div>
+  	
   	</div>
   	
   	<h4 class="inputLbl col-md-4 col-md-offset-4">*PW</h4>

@@ -23,6 +23,7 @@ img#logo{
 
 nav#mainNavi{
 	background-color: rgba(173, 216, 230, 0.2);
+	font-size: 15pt;
 }
 
 

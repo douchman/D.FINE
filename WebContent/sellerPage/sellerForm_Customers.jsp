@@ -1,3 +1,7 @@
+<%-- sellerFrom _ customer --%>
+<%-- 고객 리스트 페이지  --%>
+
+
 <%@ page language="java" pageEncoding="UTF-8"%>
 
 <html>

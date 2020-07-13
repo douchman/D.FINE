@@ -24,9 +24,7 @@
 <link href="<%=request.getContextPath()%>/css/bootstrap.min.css"
 	rel="stylesheet">
 
-<link
-	href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css"
-	rel="stylesheet">
+
 
 
 
@@ -121,7 +119,7 @@ footer {
 			</div>
 
 			<div>
-				<input style="margin-bottom: 20px;" type="file">
+				<input id="imgSelector" style="margin-bottom: 20px;" type="file">
 
 				<div class="input-group">
 					<label>물품 이름</label> <input type="text" class="form-control"
@@ -131,11 +129,11 @@ footer {
 					<label>물품 분류</label>
 				</div>
 				<div class="btn-group">
-					<button type="button" class="btn btn-default dropdown-toggle"
+					<button id="btnCategory" type="button" class="btn btn-default dropdown-toggle"
 						data-toggle="dropdown" aria-expanded="false">
 						카테고리 선택 <span class="caret"></span>
 					</button>
-					<ul class="dropdown-menu" role="menu">
+					<ul id="product_category" class="dropdown-menu" role="menu">
 						<li><a href="#">의류</a></li>
 						<li class="divider"></li>
 						<li><a href="#">식품</a></li>
@@ -150,6 +148,8 @@ footer {
 
 
 		<hr />
+		
+		<!-- SummerNote Editor -->
 		<div class="container">
 			<div class="stepTitle">
 				<span
@@ -190,48 +190,26 @@ footer {
 
 
 
-			<div class="registProduct-group"></div>
+			<div class="registProduct-group">
+				
+			</div>
 
 
 		</div>
 
-		<!-- SummerNote Editor -->
+		<div class="container" align="center" style="margin: 25px 0px 25px 0px; ">
+				<button class="btn btn-info">등록하기</button>
+		
+		</div>
+		
 
 
-
-
-
-
-
-
-
-
-
+		<div id="textarea"><input type="text"/></div>
 
 		<!-- row div end -->
 	</div>
 
-	<script>
-		$(document).ready(function() {
-
-			$('#summernote').summernote();
-
-			$('#addProductOpt').on('click', function() {
-
-				$.ajax({
-					type : "GET",
-					url : "../common/product_options.jsp",
-					async : false,
-					success : function(text) {
-						response = text;
-					}
-				});
-
-				$('.registProduct-group').prepend(response);
-
-			})
-		});
-	</script>
+	<script src="<%=request.getContextPath()%>/js/product_regist.js"></script>
 
 </body>
 </html>

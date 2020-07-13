@@ -33,6 +33,14 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  		<include-coda>/common/footer.jspf</include-coda>			
  	</jsp-property-group>
  	
+ 	<jsp-property-group>
+ 		<!-- 적용 할 범위  -->
+ 		<url-pattern>/forms/productRegistForm.jsp</url-pattern>
+ 		<!-- header -->
+ 		<include-prelude>/common/header.jspf</include-prelude>
+ 	</jsp-property-group>
+
+ 	
  	
  	</jsp-config>
 </web-app>

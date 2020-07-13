@@ -6,7 +6,7 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
  
  <jsp-config>
- 
+  	
  	<jsp-property-group>
  		<!-- 적용 할 범위  -->
  		<url-pattern>/index.jsp</url-pattern>
@@ -23,10 +23,36 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  		<include-coda>/common/footer.jspf</include-coda>			
  	</jsp-property-group>
 
-
 	<jsp-property-group>
  		<!-- 적용 할 범위  -->
  		<url-pattern>/sellerPage/sellerForm_main.jsp</url-pattern>
+ 		<!-- header -->
+ 		<include-prelude>/common/header.jspf</include-prelude>
+ 		<!-- footer -->
+ 		<include-coda>/common/footer.jspf</include-coda>			
+ 	</jsp-property-group>
+ 	
+	<jsp-property-group>
+ 		<!-- 적용 할 범위  -->
+ 		<url-pattern>/adminPage/admin_main.jsp</url-pattern>
+ 		<!-- header -->
+ 		<include-prelude>/common/header.jspf</include-prelude>
+ 		<!-- footer -->
+ 		<include-coda>/common/footer.jspf</include-coda>			
+ 	</jsp-property-group>
+
+	<jsp-property-group>
+ 		<!-- 적용 할 범위  -->
+ 		<url-pattern>/myPage/myPage_main.jsp</url-pattern>
+ 		<!-- header -->
+ 		<include-prelude>/common/header.jspf</include-prelude>
+ 		<!-- footer -->
+ 		<include-coda>/common/footer.jspf</include-coda>			
+ 	</jsp-property-group>
+ 	
+	<jsp-property-group>
+ 		<!-- 적용 할 범위  -->
+ 		<url-pattern>/myPage/myPage_Home.jsp</url-pattern>
  		<!-- header -->
  		<include-prelude>/common/header.jspf</include-prelude>
  		<!-- footer -->

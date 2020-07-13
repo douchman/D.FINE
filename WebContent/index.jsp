@@ -41,6 +41,7 @@
 <br>
 <br>
 <!-- slideShow -->
+<jsp:include page="/common/slideShow.jsp"></jsp:include>
 <!-- DISPLAY1 -->
 <div class="row">
   <div class="column">
@@ -54,7 +55,7 @@
 <br>
 <!-- Display2 -->
 <div class="display2">
-<img src="./imgs/img5.jpg" style="width:1920px; height:400px;">
+<img src="./imgs/img2.jpg" style="width:1920px; height:400px;">
 </div>
 <br>
 <br>

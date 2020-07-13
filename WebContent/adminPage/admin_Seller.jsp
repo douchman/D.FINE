@@ -31,7 +31,7 @@ th{
 }
 </style>
 <div align="center" id="memberWrapper">
-<h2>전체 회원 관리 </h2>
+<h2>판매자 관리 </h2>
 <table id="memberTable" class="table table-bordered table-hover">
 
 	<tr>

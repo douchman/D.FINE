@@ -71,7 +71,6 @@ th{
 </style>
 <div align="center" id="memberWrapper">
 <h2>전체 회원 관리 </h2>
-<table id="memberTable" class="table table-bordered table-hover">
 <div class="dropdown">
 	  <button class="dropbtn">YEAR</button>
 	  <div class="dropdown-content">
@@ -80,6 +79,7 @@ th{
 	  <a href="#">2018</a>
   	</div>
 	</div>
+<table id="memberTable" class="table table-bordered table-hover">
 		<tr>
 		<th>상품명</th>
 		<th>사진</th>

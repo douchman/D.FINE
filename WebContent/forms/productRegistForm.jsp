@@ -52,14 +52,19 @@ footer {
 .stepSubTitle {
 	font-size: 12pt;
 	color: #87CEFA;
-	margin-bottom: 16pt;
+	margin-bottom: 10px;
 }
 
 .registProduct-group {
-	padding: 15px 15px 30px 15px;
+	padding: 15px 15px 15px 15px;
 	border: 2px solid #6495ED;
 }
 
+.tagArea{
+	width : 200px;
+	height : auto;
+	margin-bottom: 10px;
+}
 [data-tooltip-text]:hover {
 	position: relative;
 }
@@ -115,10 +120,18 @@ footer {
 			<div>
 				<input id="imgSelector" style="margin-bottom: 20px;" type="file">
 
-				<div class="input-group">
-					<label>물품 이름</label> <input type="text" class="form-control"
+				<div class="input-group" style="margin-bottom: 15px;">
+					<label>물품 이름</label> <input id="productName" type="text" class="form-control"
 						placeholder="물품이름">
 				</div>
+				
+				<div class="input-group" style="margin-bottom: 15px;">
+					<label>가격 설정</label> <input id="price" type="text" class="form-control"
+						placeholder="가격 (원)">
+				</div>
+				
+				<div class="tagArea"><input type="text"/></div>
+				
 				<div>
 					<label>물품 분류</label>
 				</div>
@@ -166,22 +179,9 @@ footer {
 		<hr />
 		<div class="container">
 			<div class="stepTitle">
-				<span data-tooltip-text="물품의  옵션을 설정합니다. (ex 사이즈, 색상 ..)">*물품
-					옵션 설정</span>
+				<span data-tooltip-text="물품의  옵션을 설정합니다. (ex 사이즈, 색상 ..) 상단 카테고리를  먼저 설정 해주세요.">*물품
+					옵션 설정</span><button id="tagTest" class="btn btn-default">전송 테스트</button>
 			</div>
-
-
-
-			<div class="stepSubTitle">
-				<span>*의류 옵션 설정</span>
-			</div>
-
-			<!-- Single button -->
-			<div class="btn-group">
-				<button id="addProductOpt" type="button" class="btn btn-default"
-					aria-expanded="false" style="margin-bottom: 10px">+옵션 추가</button>
-			</div>
-
 
 
 			<div class="registProduct-group">
@@ -191,14 +191,18 @@ footer {
 
 		</div>
 
+
+		<div class="result_area">
+		
+		
+		</div>
+		
+		
 		<div class="container" align="center" style="margin: 25px 0px 25px 0px; ">
 				<button class="btn btn-info">등록하기</button>
 		
 		</div>
 		
-
-
-		<div id="textarea"><input type="text"/></div>
 
 		<!-- row div end -->
 	</div>

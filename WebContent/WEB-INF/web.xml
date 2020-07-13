@@ -67,6 +67,17 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
        <include-coda>/common/footer.jspf</include-coda>         
     </jsp-property-group>
  	
+	<jsp-property-group>
+ 		<!-- 적용 할 범위  -->
+ 		<url-pattern>/product/product_Men.jsp</url-pattern>
+ 		<url-pattern>/product/product_Women.jsp</url-pattern>
+ 		<url-pattern>/product/product_Food.jsp</url-pattern>
+ 		<!-- header -->
+ 		<include-prelude>/common/header.jspf</include-prelude>
+ 		<!-- footer -->
+ 		<include-coda>/common/footer.jspf</include-coda>			
+ 	</jsp-property-group>
+ 	
  	
  	</jsp-config>
 </web-app>

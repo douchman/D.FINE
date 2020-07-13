@@ -41,6 +41,7 @@
 <br>
 <br>
 <!-- slideShow -->
+<jsp:include page="/common/slideShow.jsp"></jsp:include>
 <!-- DISPLAY1 -->
 <div class="row">
   <div class="column">
@@ -54,7 +55,7 @@
 <br>
 <!-- Display2 -->
 <div class="display2">
-<img src="./imgs/img5.jpg" style="width:1920px; height:400px;">
+<img src="./imgs/img2.jpg" style="width:1920px; height:400px;">
 </div>
 <br>
 <br>
@@ -64,7 +65,7 @@
 <div class="row">
      <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="./imgs/img6.jpg" alt="...">
+      <img src="./imgs/KakaoTalk_20200331_165110561.jpg" alt="...">
       <div class="caption">
         <h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
         <p>입으면 눈부심</p>
@@ -75,7 +76,7 @@
 
    <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="./imgs/img6.jpg" alt="...">
+      <img src="./imgs/KakaoTalk_20200331_165110561.jpg" alt="...">
       <div class="caption">
         <h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
         <p>입으면 눈부심</p>
@@ -87,7 +88,7 @@
   
    <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="./imgs/img6.jpg" alt="...">
+      <img src="./imgs/KakaoTalk_20200331_165110561.jpg" alt="...">
       <div class="caption">
         <h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
         <p>입으면 눈부심</p>
@@ -105,7 +106,7 @@
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 

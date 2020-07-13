@@ -64,7 +64,7 @@
 <div class="row">
      <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="./imgs/KakaoTalk_20200331_165110561.jpg" alt="...">
+      <img src="./imgs/img6.jpg" alt="...">
       <div class="caption">
         <h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
         <p>입으면 눈부심</p>
@@ -75,7 +75,7 @@
 
    <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="./imgs/KakaoTalk_20200331_165110561.jpg" alt="...">
+      <img src="./imgs/img6.jpg" alt="...">
       <div class="caption">
         <h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
         <p>입으면 눈부심</p>
@@ -87,7 +87,7 @@
   
    <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="./imgs/KakaoTalk_20200331_165110561.jpg" alt="...">
+      <img src="./imgs/img6.jpg" alt="...">
       <div class="caption">
         <h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
         <p>입으면 눈부심</p>

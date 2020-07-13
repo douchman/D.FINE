@@ -79,7 +79,6 @@ body{
       	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/myPage/myPage_Home.jsp'">
       		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> My Page
       	</button></li>
-      <ul id="nav-right-side" class="nav navbar-nav navbar-right">
       	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/adminPage/admin_main.jsp'">
       		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Admin Page
       	</button></li>
@@ -106,4 +105,3 @@ body{
 
 </body>
 </html>
-

@@ -54,20 +54,20 @@ ul{
 		<hr />
 		<ul>
 			<li><a id="orders" href="#" onclick="getView(this.id)">
-			<span class="glyphicon glyphicon-user" aria-hidden="true"> Your Orders
+			<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"> Your Orders
 			</span></a>
 			</li>
 					
-			<li><a id="Seller" href="#" onclick="getView(this.id)">
-			<span class="glyphicon glyphicon-user" aria-hidden="true"> 판매자 회원 관리</span></a></li>
+			<li><a id="wishlist" href="#" onclick="getView(this.id)">
+			<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"> 위시리스트</span></a></li>
 					
-			<li><a id="Qna" href="#" onclick="getView(this.id)">
-			<span class="glyphicon glyphicon-pushpin" aria-hidden="true"> 문의 내역</span></a></li>					
+			<li><a id="userInfo" href="#" onclick="getView(this.id)">
+			<span class="glyphicon glyphicon-cog" aria-hidden="true"> 회원 정보 수정</span></a></li>					
 		</ul>
 
 
 	</div>
-	
+
 	<!-- 뷰 필드 -->
 	<div id="myPage_view" class="container">
 		

@@ -35,6 +35,7 @@ th{
 <table id="memberTable" class="table table-bordered table-hover">
 	
 	<tr>
+		<th><input type="checkbox" id="selectAll"/> 전체 선택</th>	
 		<th>상품명</th>
 		<th>사진</th>
 		<th>수량</th>
@@ -42,30 +43,35 @@ th{
 	</tr>
 
 	<tr>
+		<td><input type="checkbox" id="select"></td>
 		<td>Coca-cola Zero</td>
 		<td><img src="../imgs/KakaoTalk_20200331_165110561.jpg" width="100" height="100"></td>
 		<td>Quantity: <label>1</label></td>
 		<td>200,000</td>
 	</tr>
 	<tr>
+		<td><input type="checkbox" id="select"></td>	
 		<td>Coca-cola Zero</td>
 		<td><img src="../imgs/KakaoTalk_20200331_165110561.jpg" width="100" height="100"></td>
 		<td>Quantity: <label>1</label></td>
 		<td>200,000</td>
 	</tr>
 	<tr>
+		<td><input type="checkbox" id="select"></td>	
 		<td>Coca-cola Zero</td>
 		<td><img src="../imgs/KakaoTalk_20200331_165110561.jpg" width="100" height="100"></td>
 		<td>Quantity: <label>1</label></td>
 		<td>200,000</td>
 	</tr>
 	<tr>
+		<td><input type="checkbox" id="select"></td>	
 		<td>Coca-cola Zero</td>
 		<td><img src="../imgs/KakaoTalk_20200331_165110561.jpg" width="100" height="100"></td>
 		<td>Quantity: <label>1</label></td>
 		<td>200,000</td>
 	</tr>
 	<tr>
+		<td><input type="checkbox" id="select"></td>	
 		<td>Coca-cola Zero</td>
 		<td><img src="../imgs/KakaoTalk_20200331_165110561.jpg" width="100" height="100"></td>
 		<td>Quantity: <label>1</label></td>

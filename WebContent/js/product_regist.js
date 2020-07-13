@@ -1,20 +1,30 @@
 $(document).ready(function() {
-
+			
 			$('#summernote').summernote();
 
 			$('#addProductOpt').on('click', function() {
-
+				var optCnt = $('#optCnt').val();
+			
+				optCnt = Number(optCnt);
+				
 				$.ajax({
 					type : "GET",
-					url : "../common/product_options.jsp",
+					url : "../common/product_options_clothes.jsp",
+					data:{
+						'optCnt': optCnt
+						
+					},
 					async : false,
 					success : function(text) {
 						response = text;
 					}
 				});
-
-				$('.registProduct-group').prepend(response);
-
+					
+				if(optCnt < 3){
+					$('.registProduct-group').append(response);
+					optCnt++;
+					$('#optCnt').val(optCnt);
+				}
 			})
 			
 			

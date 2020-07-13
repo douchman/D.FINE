@@ -15,18 +15,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="<%=request.getContextPath()%>/js/jquery-3.5.1.min.js"></script>
-
-<%-- favicon 설정 --%>
-<link href="<%=request.getContextPath()%>/imgs/favicon.ico"
-	rel="shortcut icon" />
-<%-- bootstrap.css load --%>
-<link href="<%=request.getContextPath()%>/css/bootstrap.min.css"
-	rel="stylesheet">
-
-
-
-
 
 <style type="text/css">
 #snapShot {
@@ -99,12 +87,18 @@ footer {
 	word-wrap: break-word;
 	z-index: 9999;
 }
+
+.optTag{
+	color: #1E90FF;
+}
 </style>
 
 <title>물품 등록하기</title>
 </head>
-<body>
+<body>	
 
+	<input id="optCnt" type="hidden" value="1">
+	
 	<div class="container">
 		<div class="stepTitle">
 			<span data-tooltip-text="물품 스냅샷은 물품을 대표하는 이미지가 될 것 입니다.">*물품

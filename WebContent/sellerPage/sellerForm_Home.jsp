@@ -1,3 +1,7 @@
+<%-- sellerFrom _ home --%>
+<%--  초기 페이지 : 홈   --%>
+
+
 <%@ page language="java" pageEncoding="UTF-8"%>
 <div id="viewWrapper">
 	<div id="infoBox" style="float: left;">

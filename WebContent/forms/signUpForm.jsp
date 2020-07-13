@@ -13,8 +13,8 @@
 <link href="<%=request.getContextPath()%>/imgs/favicon.ico" rel="shortcut icon"/>
 <%-- bootstrap.css load --%>
 <link href="<%=request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet">
-<%-- 폰트 : 구글 나눔 명조 --%>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+
+<script src="<%=request.getContextPath()%>/js/jquery-3.5.1.min.js"></script>
 
 <title>D:FINE SIGN UP</title>
 
@@ -38,21 +38,19 @@
 }
 
 
-body{
-	font-family: 'Cairo', sans-serif;
-}
 </style>
 </head>
 <body>
+
+<% String authNum = (String)session.getAttribute("authNum"); %>
+
+<input id="authNum" type="hidden">
 <div id="wrapper">
 
 <div class="container">
 	<a class="col-md-2 col-md-offset-5" href="<%=request.getContextPath()%>/index.jsp">
 		<img src="<%=request.getContextPath()%>/imgs/logo.png">
 	</a>
-
-
-	
 	
 	<div class="row">
 	<h4 class="inputLbl col-md-4 col-md-offset-4">*ID(Email)</h4>
@@ -60,18 +58,35 @@ body{
   		 <!--  <span class="input-group-addon" id="basic-addon1">ID(email)</span>  -->
   		 <div class="col-md-4 col-md-offset-4">
   			<input id="usrId" name="usrId"  type="text" class="form-control" placeholder="ID(Email)" aria-describedby="basic-addon1">
+  			<span id="mailChk"></span>
   		</div>
   		<div class="col-md-1">
-  			<button type="button" class="btn btn-default" aria-expanded="false">Send Mail</button>
+  			<button onclick="sendMail()" type="button" class="btn btn-default" aria-expanded="false">Send Mail</button>
   		</div>
   	</div>
+  	
+  	</div>
+  	<div class="row">
+	<h4 class="inputLbl col-md-4 col-md-offset-4">*Certification Number</h4>
+	<div class="input-group col-md-12">
+  		 <!--  <span class="input-group-addon" id="basic-addon1">ID(email)</span>  -->
+  		 <div class="col-md-4 col-md-offset-4">
+  			<input id="certiNum" name="certiNum"  type="text" class="form-control" placeholder="Certi Num" aria-describedby="basic-addon1">
+  			<span id="certiChk"></span>
+  		</div>
+  		<div class="col-md-1">
+  			<button type="button" onclick="chkAuth()" class="btn btn-default" aria-expanded="false">Verify</button>
+  		</div>
+  	</div>
+  	
   	</div>
   	
   	<h4 class="inputLbl col-md-4 col-md-offset-4">*PW</h4>
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="usrPw" name="usrPw" type="password" class="form-control" placeholder="PW" aria-describedby="basic-addon1">
+  				<input id="usrPw" onkeyup="chkPass()" name="usrPw" type="password" class="form-control" placeholder="PW" aria-describedby="basic-addon1">
+  				
   			</div>
   	</div>
   	
@@ -81,7 +96,8 @@ body{
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="pwOk" type="password" class="form-control" placeholder="PW confirm" aria-describedby="basic-addon1">
+  				<input id="pwOk" onkeyup="chkPass()" type="password" class="form-control" placeholder="PW confirm" aria-describedby="basic-addon1">
+  				<span id="pwChk"></span>
   			</div>
   		</div>
 	</div>
@@ -145,6 +161,6 @@ body{
 </div><!-- container end -->
 
 
-
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/signUpForm.js"></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<%@page import="java.io.Console"%>
+<%@page import="java.sql.*"%>
+<%@ page language="java" pageEncoding="EUC-KR"%>
+
+<%!
+public Connection getConn(String url, String port, String db) {
+	Connection conn = null;
+	String jdbcDriver = "jdbc:oracle:thin:@" + url + ":" + port + ":" + db;
+	String dbUsr = "c##take";
+	String dbPass = "546944";
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		// 커넥션 정보를 가지고 Oracle DB 접근하기위함
+		conn = DriverManager.getConnection(jdbcDriver, dbUsr, dbPass);
+	}
+	catch (Exception e) {	
+		
+		e.printStackTrace();
+		}
+
+	return conn;
+
+}
+%>

@@ -14,3 +14,5 @@ $(document).ready(function() {
 function getView(id){
 	$('#myPage_view').load('myPage_'+id+'.jsp');
 }
+
+

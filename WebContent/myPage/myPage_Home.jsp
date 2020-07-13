@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <%-- favicon 설정 --%>
 <link href="<%=request.getContextPath()%>/imgs/favicon.ico" rel="shortcut icon"/>
 <%-- bootstrap.css load --%>

@@ -16,3 +16,5 @@ function getView(id){
 	$('#adminPage_view').load('admin_'+id+'.jsp');
 	
 }
+
+

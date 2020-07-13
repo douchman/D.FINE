@@ -1,5 +1,12 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 
+<style>
+#infoBox3{
+
+
+}
+
+</style>
 <!-- viewWrapper end -->
 <div align="left" id="infoBox3" style="flex: 1; width:500px">
 	<fieldset>

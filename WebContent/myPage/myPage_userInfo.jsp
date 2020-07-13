@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 
+
 <style>
 #infoBox3{
 
@@ -18,3 +19,4 @@
 	</fieldset>
 		<button class="btn btn-primary">회원 탈퇴</button>
 </div>
+

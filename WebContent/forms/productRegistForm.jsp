@@ -130,8 +130,6 @@ footer {
 						placeholder="가격 (원)">
 				</div>
 				
-				<div class="tagArea"><input type="text"/></div>
-				
 				<div>
 					<label>물품 분류</label>
 				</div>

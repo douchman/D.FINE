@@ -69,9 +69,10 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  	
 	<jsp-property-group>
  		<!-- 적용 할 범위  -->
- 		<url-pattern>/product/product_Men.jsp</url-pattern>
- 		<url-pattern>/product/product_Women.jsp</url-pattern>
- 		<url-pattern>/product/product_Food.jsp</url-pattern>
+ 		<url-pattern>/product/product_main_Men.jsp</url-pattern>
+ 		<url-pattern>/product/product_main_Women.jsp</url-pattern>
+ 		<url-pattern>/product/product_main_Food.jsp</url-pattern>
+ 		<url-pattern>/template/template_default.jsp</url-pattern>
  		<!-- header -->
  		<include-prelude>/common/header.jspf</include-prelude>
  		<!-- footer -->

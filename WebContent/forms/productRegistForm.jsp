@@ -101,7 +101,7 @@ footer {
 <title>물품 등록하기</title>
 </head>
 <body>	
-
+	<form>
 	<input id="optCnt" type="hidden" value="1">
 	
 	<div class="container">
@@ -114,11 +114,11 @@ footer {
 			<div id="snapShot" class="col-md-2">
 				<img id="product_snapShot"
 					src="<%=request.getContextPath()%>/imgs/noimage.jpg" alt="..."
-					class="img-thumbnail">
+					class="img-thumbnail" >
 			</div>
 
 			<div>
-				<input id="imgSelector" style="margin-bottom: 20px;" type="file">
+				<input id="imgSelector" style="margin-bottom: 20px;" type="file" accept="image/png, image/jpeg, image/jpg">
 
 				<div class="input-group" style="margin-bottom: 15px;">
 					<label>물품 이름</label> <input id="productName" type="text" class="form-control"
@@ -139,9 +139,9 @@ footer {
 						카테고리 선택 <span class="caret"></span>
 					</button>
 					<ul id="product_category" class="dropdown-menu" role="menu">
-						<li><a href="#">의류</a></li>
+						<li><a href='javascript:void(0);'>의류</a></li>
 						<li class="divider"></li>
-						<li><a href="#">식품</a></li>
+						<li><a href='javascript:void(0);'>식품</a></li>
 					</ul>
 				</div>
 
@@ -162,11 +162,10 @@ footer {
 					상세 정보입력</span>
 			</div>
 
-			<form method="post"
-				action="<%=request.getContextPath()%>/test/testRes.jsp">
+	
 				<textarea id="summernote" name="editordata"></textarea>
-				<input type="submit" value="전송 테스트">
-			</form>
+			
+			
 		</div>
 
 		<!-- SummerNote Editor -->
@@ -197,14 +196,14 @@ footer {
 		
 		
 		<div class="container" align="center" style="margin: 25px 0px 25px 0px; ">
-				<button class="btn btn-info">등록하기</button>
+				<input type="submit" class="btn btn-info" value="등록하기">
 		
 		</div>
 		
 
 		<!-- row div end -->
 	</div>
-
+</form>
 	<script src="<%=request.getContextPath()%>/js/product_regist.js"></script>
 
 </body>

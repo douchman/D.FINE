@@ -8,7 +8,7 @@
     	int price = Integer.parseInt(request.getParameter("price"));
     	String [] valArr = request.getParameterValues("valArr1");    	
     	String [] valArr2 = request.getParameterValues("valArr2");    
-    	
+    	String src = request.getParameter("src");
     	
     	
     %>
@@ -18,7 +18,7 @@
     
     
     <h2> 가격 : <%=price%></h2>
-    
+    <%=src%>
     <%for(int i =0; i<valArr.length; i++){%>
     <%for(int j =0; j<valArr2.length; j++){ %>
 		<span class="stepSubTitle"><%=valArr[i]%> :<%=valArr2[j]%></span> 

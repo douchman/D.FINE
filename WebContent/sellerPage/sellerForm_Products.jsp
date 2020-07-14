@@ -65,7 +65,7 @@
 <br />
 <br />
 <div style="float: right; margin-bottom: 10px; flo">
-	<button  class="btn btn-info" onclick="location.href='<%=request.getContextPath()%>/forms/productRegistForm.jsp'">물품 등록</button>
+	<button  class="btn btn-info" onclick="location.href='<%=request.getContextPath()%>/productRegist/productRegistForm.jsp'">물품 등록</button>
 </div>
 <table id="productTable" class="table table-bordered table-hover">
 	<tr>

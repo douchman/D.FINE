@@ -101,8 +101,8 @@ footer {
 <title>물품 등록하기</title>
 </head>
 <body>	
-	<form>
-	<input id="optCnt" type="hidden" value="1">
+	<form id="productRegistForm" action="<%=request.getContextPath()%>/productRegist/productRegistProc.jsp" 
+		method="post" enctype="multipart/form-data">
 	
 	<div class="container">
 		<div class="stepTitle">
@@ -112,40 +112,76 @@ footer {
 
 		<div class="row">
 			<div id="snapShot" class="col-md-2">
+			<!-- img 는 그저 미리 보기 용임 절대 현혹되지 말 것. -->
 				<img id="product_snapShot"
 					src="<%=request.getContextPath()%>/imgs/noimage.jpg" alt="..."
 					class="img-thumbnail" >
 			</div>
 
 			<div>
-				<input id="imgSelector" style="margin-bottom: 20px;" type="file" accept="image/png, image/jpeg, image/jpg">
+				
+				<input id="imgSelector" name="uploadFile" style="margin-bottom: 20px;" type="file" accept="image/png, image/jpeg, image/jpg">
 
 				<div class="input-group" style="margin-bottom: 15px;">
-					<label>물품 이름</label> <input id="productName" type="text" class="form-control"
+					<label>물품 이름</label><input id="productName" name="productName" type="text" class="form-control"
 						placeholder="물품이름">
 				</div>
 				
-				<div class="input-group" style="margin-bottom: 15px;">
-					<label>가격 설정</label> <input id="price" type="text" class="form-control"
-						placeholder="가격 (원)">
+				
+				
+				<div>
+					<label>성별 구분</label>
+				</div>
+				<div class="btn-group">
+					<button id="gender_category" type="button" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false">
+						성별 선택 <span class="caret"></span>
+					</button>
+					<ul id="gender_ul" class="dropdown-menu" role="menu">
+						<li><a href='javascript:void(0);'>남성의류</a></li>
+						<li class="divider"></li>
+						<li><a href='javascript:void(0);'>여성의류</a></li>
+					</ul>
 				</div>
 				
 				<div>
-					<label>물품 분류</label>
+					<label>물품 종류 </label>
 				</div>
 				<div class="btn-group">
-					<button id="btnCategory" type="button" class="btn btn-default dropdown-toggle"
+					<button id="main_category" type="button" class="btn btn-default dropdown-toggle"
 						data-toggle="dropdown" aria-expanded="false">
-						카테고리 선택 <span class="caret"></span>
+						대분류 설정 <span class="caret"></span>
 					</button>
-					<ul id="product_category" class="dropdown-menu" role="menu">
-						<li><a href='javascript:void(0);'>의류</a></li>
+					<ul id="main_ul" class="dropdown-menu" role="menu">
+						<li><a href='javascript:void(0);'>상의</a></li>
 						<li class="divider"></li>
-						<li><a href='javascript:void(0);'>식품</a></li>
+						<li><a href='javascript:void(0);'>하의</a></li>
+						<li class="divider"></li>
+						<li><a href='javascript:void(0);'>아우터</a></li>
+						<li class="divider"></li>
+						<li><a href='javascript:void(0);'>원피스</a></li>
+						<li class="divider"></li>
+						<li><a href='javascript:void(0);'>악세서리</a></li>
+						
+					</ul>
+				</div>
+				
+				<div>
+					<label>상세 분류</label>
+				</div>
+				<div class="btn-group">
+					<button id="class_category" type="button" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false">
+						상세분류 선택 <span class="caret"></span>
+					</button>
+					<ul id="class_ul" class="dropdown-menu" role="menu">			
 					</ul>
 				</div>
 
-
+				<div class="input-group" style="margin-bottom: 15px;">
+					<label>가격 설정</label> <input id="productPrice" name="productPrice" type="text" class="form-control"
+						placeholder="가격 (원)">
+				</div>
 
 			</div>
 		</div>
@@ -162,13 +198,12 @@ footer {
 					상세 정보입력</span>
 			</div>
 
-	
+			<!-- SummerNote Editor -->
 				<textarea id="summernote" name="editordata"></textarea>
 			
 			
 		</div>
 
-		<!-- SummerNote Editor -->
 
 
 
@@ -177,14 +212,15 @@ footer {
 		<div class="container">
 			<div class="stepTitle">
 				<span data-tooltip-text="물품의  옵션을 설정합니다. (ex 사이즈, 색상 ..) 상단 카테고리를  먼저 설정 해주세요.">*물품
-					옵션 설정</span><button id="tagTest" class="btn btn-default">전송 테스트</button>
+					옵션 설정</span>
 			</div>
 
 
 			<div class="registProduct-group">
 				
 			</div>
-
+			<input id="tagTest" type="button" style="margin-top: 20px" class="btn-default" value="상세 설정 하기"> 
+			
 
 		</div>
 

@@ -5,10 +5,13 @@
     	request.setCharacterEncoding("UTF-8");
     	
     	String productName = request.getParameter("productName");
-    	int price = Integer.parseInt(request.getParameter("price"));
+    	String price = request.getParameter("productPrice");
+    	if(price == null){
+    		price = " 가격이 설정되지 않았습니다. ";
+    	}
     	String [] valArr = request.getParameterValues("valArr1");    	
     	String [] valArr2 = request.getParameterValues("valArr2");    
-    	String src = request.getParameter("src");
+    	
     	
     	
     %>
@@ -18,7 +21,9 @@
     
     
     <h2> 가격 : <%=price%></h2>
-    <%=src%>
+    <input id="test" type="hidden" value="<%=valArr%>">
+    
+    
     <%for(int i =0; i<valArr.length; i++){%>
     <%for(int j =0; j<valArr2.length; j++){ %>
 		<span class="stepSubTitle"><%=valArr[i]%> :<%=valArr2[j]%></span> 
@@ -26,3 +31,8 @@
 		<br/>   
     	<%}%>
     <%}%>
+    
+    <script>
+    	console.log($('#test').val().[1]);
+    
+    </script>

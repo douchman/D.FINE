@@ -28,9 +28,9 @@ th{
 	padding-left: 150px;
 }
 </style>
-<div align="center" id="memberWrapper">
+<div class="container" id="memberWrapper">
 <!-- TAP -->
-<div class="container2">
+<div class="container">
 <ul class="nav nav-pills">
   <li role="presentation"><a href="#">전체</a></li>
   <li role="presentation"><a href="#">소분류1</a></li>
@@ -40,7 +40,7 @@ th{
 </ul>
 </div>
 
-<div align="center" id="memberWrapper">
+
 <%-- PRODUCT DISPLAY1 --%>
 <table id="memberTable" class="table table-bordered table-hover">
 
@@ -56,7 +56,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -67,7 +67,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -78,7 +78,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -89,7 +89,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>			
 		</tr>
 		<tr>
@@ -102,7 +102,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -113,7 +113,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -124,7 +124,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -135,7 +135,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>			
 		</tr>		
 	</table>

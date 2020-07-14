@@ -60,7 +60,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -71,7 +71,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -82,7 +82,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -93,7 +93,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>			
 		</tr>
 		<tr>
@@ -106,7 +106,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -117,7 +117,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -128,7 +128,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -139,7 +139,7 @@ th {
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>			
 		</tr>		
 	</table>

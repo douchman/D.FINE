@@ -33,14 +33,20 @@
 
 
 
-<title>WELL COME TO D:FINE</title>
+<title>WELCOME TO D:FINE</title>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
 <!-- slideShow -->
+<main role="main" class="container">
+		<div class="jumbotron text-center">
+			<p>
+			</p>
+			<p>
+				<button class="btn btn-lg btn-primary my-2 my-sm-0" type="submit"
+					 onclick="location.href='<%=request.getContextPath()%>/forms/sellerSignUpForm.jsp'">Seller Upgrade &raquo;</button>
+			</p>
+		</div>
+	</main>
 <!-- DISPLAY1 -->
 <div class="row">
   <div class="column">

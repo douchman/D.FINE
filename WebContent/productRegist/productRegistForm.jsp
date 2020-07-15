@@ -19,13 +19,13 @@
 <style type="text/css">
 #snapShot {
 	width: 350px;
-	height: auto;
+	
 }
 
 #snapShot #product_snapShot {
 	border: 2px solid #6495ED;
 	width: inherit;
-	height: auto;
+	
 }
 
 body {
@@ -101,9 +101,17 @@ footer {
 <title>물품 등록하기</title>
 </head>
 <body>	
+<!-- action="request.getContextPath()/test/testRes3.jsp" -->
+<!-- action="request.getContextPath()/productRegist/productRegistProc.jsp" -->
 	<form id="productRegistForm" action="<%=request.getContextPath()%>/productRegist/productRegistProc.jsp" 
-		method="post" enctype="multipart/form-data">
-	
+	method="post" enctype="multipart/form-data">
+
+<input id="colors" name="colors" type="hidden">
+<input id="size" name="size" type="hidden">
+<input id="productCode1" name="productCode1" type="hidden">
+<input id="productCode2" name="productCode2" type="hidden">
+<input id="productCode3" name="productCode3" type="hidden">
+<input name="brandName" value="Empty">
 	<div class="container">
 		<div class="stepTitle">
 			<span data-tooltip-text="물품 스냅샷은 물품을 대표하는 이미지가 될 것 입니다.">*물품
@@ -118,7 +126,7 @@ footer {
 					class="img-thumbnail" >
 			</div>
 
-			<div>
+			<div class="col-md-4">
 				
 				<input id="imgSelector" name="uploadFile" style="margin-bottom: 20px;" type="file" accept="image/png, image/jpeg, image/jpg">
 
@@ -127,6 +135,16 @@ footer {
 						placeholder="물품이름">
 				</div>
 				
+				<div class="input-group" style="margin-bottom: 15px;">
+					<label>물품 수량</label><input id="productStock" name="productStock" type="text" class="form-control"
+						placeholder="물품 수량">
+				</div>
+				
+				
+				<div class="input-group" style="margin-bottom: 15px;">
+					<label>가격 설정</label> <input id="productPrice" name="productPrice" type="text" class="form-control"
+						placeholder="가격 (원)">
+				</div>
 				
 				
 				<div>
@@ -169,6 +187,7 @@ footer {
 				<div>
 					<label>상세 분류</label>
 				</div>
+				
 				<div class="btn-group">
 					<button id="class_category" type="button" class="btn btn-default dropdown-toggle"
 						data-toggle="dropdown" aria-expanded="false">
@@ -178,12 +197,10 @@ footer {
 					</ul>
 				</div>
 
-				<div class="input-group" style="margin-bottom: 15px;">
-					<label>가격 설정</label> <input id="productPrice" name="productPrice" type="text" class="form-control"
-						placeholder="가격 (원)">
-				</div>
+				
 
 			</div>
+			
 		</div>
 
 
@@ -199,7 +216,7 @@ footer {
 			</div>
 
 			<!-- SummerNote Editor -->
-				<textarea id="summernote" name="editordata"></textarea>
+				<textarea id="summernote" name="productDetails"></textarea>
 			
 			
 		</div>
@@ -232,15 +249,16 @@ footer {
 		
 		
 		<div class="container" align="center" style="margin: 25px 0px 25px 0px; ">
-				<input type="submit" class="btn btn-info" value="등록하기">
-		
+				<input type="submit" class="btn btn-info" value="등록하기">			
 		</div>
 		
 
 		<!-- row div end -->
 	</div>
 </form>
+	
 	<script src="<%=request.getContextPath()%>/js/product_regist.js"></script>
+	<script src="<%=request.getContextPath()%>/js/jquery.form.min.js"></script>
 
 </body>
 </html>

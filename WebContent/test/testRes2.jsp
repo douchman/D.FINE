@@ -9,10 +9,10 @@
     	if(price == null){
     		price = " 가격이 설정되지 않았습니다. ";
     	}
-    	String [] valArr = request.getParameterValues("valArr1");    	
+    	String [] valArr1 = request.getParameterValues("valArr1");    	
     	String [] valArr2 = request.getParameterValues("valArr2");    
     	
-    	
+    	int idx = 0;
     	
     %>
 
@@ -21,18 +21,21 @@
     
     
     <h2> 가격 : <%=price%></h2>
-    <input id="test" type="hidden" value="<%=valArr%>">
+
     
     
-    <%for(int i =0; i<valArr.length; i++){%>
+    <%for(int i =0; i<valArr1.length; i++){%>
     <%for(int j =0; j<valArr2.length; j++){ %>
-		<span class="stepSubTitle"><%=valArr[i]%> :<%=valArr2[j]%></span> 
+		<span class="stepSubTitle">옵션 <%=++idx%> : <%=valArr1[i]%> _ <%=valArr2[j]%>  </span><br/>
+		개별 가 : <input type="text" placeholder="가격" value="<%=price%>" >원
 		<br/>
 		<br/>   
     	<%}%>
     <%}%>
     
+    
+    
     <script>
-    	console.log($('#test').val().[1]);
+    
     
     </script>

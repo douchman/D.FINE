@@ -50,6 +50,16 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  		<include-prelude>/common/header.jspf</include-prelude>
  	</jsp-property-group>
 
+
+	<jsp-property-group>
+       <!-- 적용 할 범위  -->
+       <url-pattern>/signPage/signInForm.jsp</url-pattern>
+       <url-pattern>/signPage/signUpForm.jsp</url-pattern>
+       <!-- footer -->
+       <include-coda>/common/footer.jspf</include-coda>         
+    </jsp-property-group>
+    
+    
    <jsp-property-group>
        <!-- 적용 할 범위  -->
        <url-pattern>/adminPage/admin_main.jsp</url-pattern>

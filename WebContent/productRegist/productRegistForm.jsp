@@ -216,7 +216,7 @@ footer {
 			</div>
 
 			<!-- SummerNote Editor -->
-				<textarea id="summernote" name="productDetails"></textarea>
+			<textarea id="summernote" name="productDetails"></textarea>
 			
 			
 		</div>

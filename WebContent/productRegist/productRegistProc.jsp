@@ -129,6 +129,7 @@
     
     MultipartRequest multiReq = getMultiReq(request, uploadFilePath, 10);
     File file = multiReq.getFile("uploadFile");
+    
     String snapshotPath= "http://localhost:8080/D.FINE/uploadFile/"+file.getName();
     
 	Connection conn = null;
@@ -139,7 +140,7 @@
 	
 
 	
-		
+		/*
 		for(Dfineproduct dp : productLst){
     		out.println("물품명 "+dp.getProductname()+"<br/>");
     		out.println("물품 ID "+dp.getProductid()+"<br/>");
@@ -149,7 +150,7 @@
     		out.println("물품색상  "+dp.getProductcolor()+"<br/>");
     		out.print("<br/><br/>");
 		}
-		
+		*/
 		
 		String name = productLst.get(0).getProductname();
 		String id = productLst.get(0).getProductname();
@@ -166,6 +167,11 @@
     
     %>
  
+<%=name %>
+<%=id %>
+<%=price %>
+<%=contents %>
+<img src="<%=imgPath%>">
 
  	
  	

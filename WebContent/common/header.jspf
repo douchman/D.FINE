@@ -86,7 +86,7 @@ body{
       	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/sellerPage/sellerForm_main.jsp'">
       		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Seller Menu
       	</button></li>
-      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/forms/signInForm.jsp'">
+      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/signPage/signInForm.jsp'">
       		 <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign In
       	</button></li>
       </ul>

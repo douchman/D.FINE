@@ -1,3 +1,16 @@
+$(document).ready(function() {
+	$(document).on("keydown",'input[type="text"]',function(event) {
+	  	if (event.keyCode === 13) {
+		  event.preventDefault();
+	  		};
+		});
+	
+})
+
+
+
+
+
 function chkPass() {
 
 	$id = function(id) {

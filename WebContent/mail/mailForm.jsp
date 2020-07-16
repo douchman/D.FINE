@@ -16,6 +16,6 @@
 	// 실습상으로 그냥 한것
 
 	
-	mailSendor.sendMail(adress, "인증메일입니다잇","인증번호 : [ "+authNum+" ]" );
+	//mailSendor.sendMail(adress, "인증메일입니다잇","인증번호 : [ "+authNum+" ]" );
 	out.print(authNum);
 %>

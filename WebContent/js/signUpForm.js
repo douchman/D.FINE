@@ -9,14 +9,12 @@ $(document).ready(function() {
 
 
 
-
-
 function chkPass() {
 
 	$id = function(id) {
 		return document.getElementById(id);
 	}
-	var pw = $id('usrPw');
+	var pw = $id('usrPW');
 	var pwok = $id('pwOk');
 	var pwchk = $id('pwChk');
 
@@ -41,16 +39,65 @@ function chkPass() {
 	}
 }
 
+
+function idVaildChk(){
+	var result = "";
+	//var usrId = $('#usrID').val();
+	console.log($('#usrID').val());
+	$.ajax({
+		type	: "GET",
+		url 	: "../signPage/usrIdChkProc.jsp",
+		data	:{			
+			'usrID' : $('#usrID').val()			
+		},
+		success	: function(response) {
+			response = response.trim();
+			
+			// 0 : 가입 가능
+			// 1 : 아이디 존재 가입 불가능
+			// 2 : 아이디 미입력
+			switch(response){
+			case '0':
+				sendMail();
+				break;
+				
+			case '1':
+				result = "이미 존재하는 아이디 입니다.";
+				alert(result);
+				break;
+				
+			case '2':
+				result = "아이디를 입력해 주십시오.";
+				alert(result);
+				break;
+			
+			}
+			
+			
+		}
+	})
+	
+	
+	
+	
+}
+
+
 function sendMail() {
 	$.ajax({
 		type 	: "GET",
 		url 	: "../mail/mailForm.jsp",
 		data 	: {
-			'email'	: $('#usrId').val()	
+			'email'	: $('#usrID').val()	
 		},
 		success : function(authNum) {
 			console.log(authNum.trim());
 			$('#authNum').val(authNum.trim());
+			
+			// 이 부분 지워야함
+			$('#certiNum').val(authNum.trim());
+			//
+			
 			
 			$('#mailChk').css("color","blue");
 			$('#mailChk').html("메일 전송 성공");
@@ -63,7 +110,6 @@ function sendMail() {
 
 	});
 }
-
 
 function chkAuth() {
 
@@ -82,6 +128,7 @@ function chkAuth() {
 			&& certiNum != '' && authNum.value == certiNum.value) {
 		certiChk.style.color = 'blue';
 		certiChk.innerHTML = '인증 성공';
+		$('#usrID').attr('readonly', true);
 	}
 
 	else if(authNum.value != certiNum.value) {

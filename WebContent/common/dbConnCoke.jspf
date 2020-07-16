@@ -6,8 +6,8 @@
 public Connection getConn(String url, String port, String db) {
 	Connection conn = null;
 	String jdbcDriver = "jdbc:oracle:thin:@" + url + ":" + port + ":" + db;
-	String dbUsr = "c##take";
-	String dbPass = "546944";
+	String dbUsr = "c##jeongwh0310";
+	String dbPass = "0000";
 	try {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		// 커넥션 정보를 가지고 Oracle DB 접근하기위함

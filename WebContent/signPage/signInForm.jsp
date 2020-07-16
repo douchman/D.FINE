@@ -61,7 +61,7 @@
 	<div id="btnField" align="center">
 		<div>
 			<button type="button" class="btn btn-info" aria-expanded="false" onclick="login()">Sign In</button>
-			<button type="button" class="btn btn-info" aria-expanded="false" onclick="location.href='<%=request.getContextPath()%>/forms/signUpForm.jsp'">Sign Up</button>
+			<button type="button" class="btn btn-info" aria-expanded="false" onclick="location.href='<%=request.getContextPath()%>/signPage/signUpForm.jsp'">Sign Up</button>
 		</div>
 	</div>
 	

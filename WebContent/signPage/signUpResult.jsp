@@ -37,7 +37,8 @@
     	String pagePath = "";
     	
     	//테스트용 코드 지울것.
-    	//result = "success";
+    	if(result == null)
+    		result = "success";
     	//
     	
     	

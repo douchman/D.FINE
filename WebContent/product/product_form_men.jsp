@@ -1,5 +1,39 @@
+<%@page import="java.net.URLEncoder"%>
+<%@page import="Dfine.common.CommonTools"%>
+<%@page import="Dfine.Dfineproduct"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@page import="Dfine.shoppingCart"  %>
+<%!
+	public String getEncoderStr(HttpServletRequest req, String str, String encode){
+		String encodeStr = "";
+		try{
+			encodeStr = req.getParameter(str);
+			//한글을 URL로 전송하기 위해 URLEncoder 사용
+			return encodeStr==null?"":URLEncoder.encode(encodeStr, encode);
+		}catch(Exception e){e.printStackTrace();}
+		return encodeStr;
+	}
+%>
+<%
+	String searchSelect = getEncoderStr(request, "searchSelect", "UTF-8");
+	String search = getEncoderStr(request, "search", "UTF-8");
+	String naviStr = "searchSelect="+searchSelect+"&search="+search+"&";
 
+	
+	List<Dfineproduct> productLst = (List<Dfineproduct>)session.getAttribute("productLst");
+	String url = request.getContextPath()+"/Board/boardProc.jsp?"+naviStr+"curPage=boardForm&pageNum=";
+	String path = request.getContextPath()+"/Board/boardProc.jsp?curPage=boardForm&pageNum="+1;
+	
+
+	
+	int totalPage = (int)request.getAttribute("totalPage");
+	int blockSize = (int)request.getAttribute("blockSize");
+	int pageNum = (int)request.getAttribute("pageNum");
+	
+	int pageCnt = totalPage / blockSize;
+	if(	totalPage % blockSize>0 )	pageCnt++;
+%>
 <style>
 input {
 	font-size: 14pt;
@@ -28,7 +62,12 @@ th{
 	padding-left: 150px;
 }
 </style>
-<div class="container" id="memberWrapper">
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/productMenPage.js"></script>
+<form id="frm" action="<%=request.getContextPath()%>/index.jsp" method="post">
+<input type="hidden" name="curPage">
+<input type="hidden" name="frmPage" value="writeForm">
+<center>
+<div align="center" id="memberWrapper">
 <!-- TAP -->
 <div class="container">
 <ul class="nav nav-pills">
@@ -43,104 +82,34 @@ th{
 
 <%-- PRODUCT DISPLAY1 --%>
 <table id="memberTable" class="table table-bordered table-hover">
+<%
+	for(Dfineproduct product: productLst){
+%>		
+<tr>
+	<td>
+		<div class="thumbnail">
+			<img src="<%=product.getSnapshot()%>" alt="...">
+			<div class="caption">
+				<h3><%=product.getProductname()%>></h3>
+				<p><a href="<%=request.getContextPath()%>/?"><%=product.getBrandname()%></a></p>
+				<p><%=product.getProductprice()%>원</p>
 
-		
-
-		<tr>
-		<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>
-			<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>
-			<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>
-			<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>			
-		</tr>
-		<tr>
-		<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>
-			<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>
-			<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>
-			<td>
-				<div class="thumbnail">
-					<img src="../imgs/img6.jpg" alt="...">
-					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
-			</td>			
-		</tr>		
-	</table>
+				<p>
+					<a href="#" class="btn btn-primary glyphicon glyphicon-sunglasses" role="button">장바구니 추가</a>
+					<a href="#" class="btn btn-primary" role="button">구매하기</a>
+				</p>
+			</div>
+		</div>
+	</td>
+</tr>
+<%
+	}
+%>
+</table>
 	<!-- 페이징 -->
-	
+<%-- <%=CommonTools.getNavi(pageNum, blockSize, totalPage, url)%>
+ --%>	
+ 
 <nav>
   <ul class="pagination">
     <li>
@@ -161,7 +130,23 @@ th{
   </ul>
 </nav>
 <!-- SearchPROC   -->
-
-
-
+</form>
+<div id="div_to_append_to">
 </div>
+</div>
+</center>
+
+<script>
+
+$("#addCartBtn").click(function (){
+    $("#div_to_append_to").button(
+
+                 $.get(
+                        "shoppingCart.jsp",
+                        function(data){$('#div_to_append_to').append( '<strong>Tiago</strong>')}, 
+                        "json"
+                   )
+            );
+    });
+
+</script>

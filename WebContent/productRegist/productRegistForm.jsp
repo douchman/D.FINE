@@ -111,7 +111,7 @@ footer {
 <input id="productCode1" name="productCode1" type="hidden">
 <input id="productCode2" name="productCode2" type="hidden">
 <input id="productCode3" name="productCode3" type="hidden">
-<input name="brandName" value="Empty">
+<input name="brandName" type="hidden" value="Empty">
 	<div class="container">
 		<div class="stepTitle">
 			<span data-tooltip-text="물품 스냅샷은 물품을 대표하는 이미지가 될 것 입니다.">*물품

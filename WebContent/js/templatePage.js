@@ -1,13 +1,14 @@
 $(document).ready(function() {	
-/*	$('#template_view').load('template_default_form.jsp');
-*/	
-	/* 사이드메뉴에서 페이지 호출시 이쪽에서 처리해서 
+	$('#template_view').load('template_default_form.jsp');
+	$('#overview').load('template_default_form.jsp');
+	/*	
+	 사이드메뉴에서 페이지 호출시 이쪽에서 처리해서 
 	 * 
 	 * $('#sellerPage_view') 에 .load 로 페이지를 불러올 것.
 	 * 위 영역은 <div> 영역.
 	 * 
-	 * */
-	
+	 * 
+	*/
 	
 });
 

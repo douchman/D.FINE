@@ -24,7 +24,6 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  	</jsp-property-group>
 
 
-
 	<jsp-property-group>
        <!-- 적용 할 범위  -->
        <url-pattern>/productRegist/*</url-pattern>

@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
 <style type="text/css">
 img#logo{
 	width: 80px;
@@ -86,7 +87,7 @@ body{
       	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/sellerPage/sellerForm_main.jsp'">
       		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Seller Menu
       	</button></li>
-      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/forms/signInForm.jsp'">
+      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/signPage/signInForm.jsp'">
       		 <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign In
       	</button></li>
       </ul>

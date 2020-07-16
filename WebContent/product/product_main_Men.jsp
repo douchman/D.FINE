@@ -110,8 +110,12 @@ ul{
 	<br />
 
 
-	<!-- wrapper end -->
+<script>
 
+
+
+
+</script>
 <script src="<%=request.getContextPath()%>/js/productMenPage.js"></script>
 </body>
 </html>

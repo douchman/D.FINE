@@ -1,5 +1,4 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-
 <style>
 input {
 	font-size: 14pt;
@@ -27,39 +26,41 @@ th{
 	height: 30px;
 }
 #memberWrapper{
-	padding-left: 150px;
 }
 </style>
-<div align="center" id="memberWrapper">
-<!-- TAP -->
-<div class="container2">
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="#">전체</a></li>
-  <li role="presentation"><a href="#">소분류1</a></li>
-  <li role="presentation"><a href="#">소분류2</a></li>
-  <li role="presentation"><a href="#">소분류3</a></li>
-
-</ul>
-</div>
+<!-- TAB -->
+<!-- OVERVIEW  -->
 <%-- PRODUCT DISPLAY1 --%>
-<table id="memberTable" class="table table-bordered table-hover">
- <div class="w3-row">
-    <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+<div class="container" id="memberWrapper" align="center">
+
+<div class="w3-row">
+    <a href="javascript:void(0)" onclick="openCity(event, 'overview');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Overview</div>
     </a>
-    <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>
-  </div>	
-  
- <div id="London" class="w3-container city" style="display:block">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
+    <a href="javascript:void(0)" onclick="openCity(event, 'product');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Product</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'contact');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Contact</div>
+    </a>
   </div>
 
-  <div id="Paris" class="w3-container city" style="display:inline">
-    <h2>Paris</h2>
+  <div id="overview" class="w3-container city" style="display:none">
+    <h2>Overview</h2>
     <p>
-    <tr>
+	<!-- Overview template 들어갈 곳 -->	
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+  </div>
+<!-- PRODUCT  -->
+  <div id="product" class="w3-container city" style="display:none">
+    <h2>Product</h2>
+    <p>
+   	<!-- Product template 들어갈 곳 -->	
+	<table id="memberTable" class="table table-bordered table-hover">
+		<tr>
 		<td>
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
@@ -69,7 +70,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -80,7 +81,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -91,7 +92,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -102,7 +103,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>			
 		</tr>
 		<tr>
@@ -115,7 +116,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -126,7 +127,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -137,7 +138,7 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>
 			<td>
 				<div class="thumbnail">
@@ -148,20 +149,12 @@ th{
 						<p>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
-					</div>
+					</div></div>
 			</td>			
-		</tr>		
-	</table>
-    </p>
-  </div>
-
-
-</div>		
-
-		
-	<!-- 페이징 -->
-	
-<nav>
+		</tr>
+    </table>
+<!-- 페이징 -->
+    <nav>
   <ul class="pagination">
     <li>
       <a href="#" aria-label="Previous">
@@ -180,11 +173,21 @@ th{
     </li>	
   </ul>
 </nav>
-<!-- SearchPROC   -->
-
-
-
+  </div>
+		
+<!-- contact -->
+<div id="contact" class="w3-container city" style="display:none">
+    <h2>Contact</h2>
+    <p>
+	<!-- Overview template 들어갈 곳 -->	
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+  </div>
 </div>
+
+
 
 
 

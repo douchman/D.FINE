@@ -32,7 +32,7 @@ th{
 </style>
 <div align="center" id="memberWrapper">
 <!-- TAP -->
-<div class="container2">
+<div class="container">
 <ul class="nav nav-pills">
   <li role="presentation"><a href="#">전체</a></li>
   <li role="presentation"><a href="#">소분류1</a></li>
@@ -51,9 +51,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -62,9 +63,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -73,9 +75,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -84,9 +87,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+							<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -97,9 +101,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -108,9 +113,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -119,9 +125,10 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
 						</p>
 					</div></div>
@@ -130,12 +137,12 @@ th{
 				<div class="thumbnail">
 					<img src="../imgs/img6.jpg" alt="...">
 					<div class="caption">
-						<h3>왼쪽 겨드랑이에서 냄새가 나는것 같다</h3>
-						<p>입으면 눈부심</p>
+						<h3>Coca-Cola Zero</h3>
+						<p><a href="#">Coca-Cola</a></p>
 						<p>
+							<a href="#" class="btn btn-primary" role="button">장바구니 추가</a>
 							<a href="#" class="btn btn-primary" role="button">구매하기</a>
-						</p>
-					</div></div>
+						</p>					</div></div>
 			</td>			
 		</tr>		
 	</table>

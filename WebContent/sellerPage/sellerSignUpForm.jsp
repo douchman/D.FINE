@@ -1,7 +1,15 @@
 <%-- signUpForm.jsp --%>
 <%-- col-md 사용해서 배치했음 근데 웹 브라우저 크기 줄이면 원하는 대로 동작이 잘 안됌 해결 가능하면 해결 바람 --%>
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%
+	String usrID = request.getParameter("usrID");
+
+	
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +25,8 @@
 <script src="<%=request.getContextPath()%>/js/jquery-3.5.1.min.js"></script>
 
 <title>D:FINE SIGN UP</title>
-
+<script src="<%=request.getContextPath() %>/js/sellerPage.js" type="text/javascript"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/sellerPage.js"></script>
 <style type="text/css">
 
 #wrapper h4{
@@ -40,24 +49,34 @@
 
 </style>
 </head>
+
 <body>
 
 
+<form name="frm" id="frm" action="sellerSignUpProc.jsp" method="post">
+
 <input id="authNum" type="hidden">
 <div id="wrapper">
-
 <div class="container">
 	<a class="col-md-2 col-md-offset-5" href="<%=request.getContextPath()%>/index.jsp">
 		<img src="<%=request.getContextPath()%>/imgs/logo.png">
 	</a>
+	<h3 class="inputLbl col-md-5 col-md-offset-5" align="center" style="font-weight:bold;">판매자 신청서</h3>
+	<h4 class="inputLbl col-md-4 col-md-offset-4">*User ID</h4>
+
+  	<div class="row">
+  		<div class="input-group col-md-12">
+  			<div class="col-md-4 col-md-offset-4">
+  				<input id="usrID" name="usrID" type="text" class="form-control" value="<%=usrID %>" aria-describedby="basic-addon1">
+  			</div>
+  		</div>
+	</div>
+
 	<h4 class="inputLbl col-md-4 col-md-offset-4">*Business</h4>
   	<div class="row">
   		<div class="input-group col-md-12">
-  			<div class="col-md-2 col-md-offset-4">
-  				<input id="businessName" name="businessName" type="text" class="form-control" placeholder="Business Name" aria-describedby="basic-addon1">
-  			</div>
-  			<div class="col-md-2">
-  				<input id="usrLastName" name="usrLastName" type="text" class="form-control" placeholder="Business Type" aria-describedby="basic-addon1">
+  			<div class="col-md-4 col-md-offset-4">
+  				<input id="brandName" name="brandName" type="text" class="form-control" placeholder="Business Name" aria-describedby="basic-addon1">
   			</div>
   		</div>
 	</div>
@@ -65,7 +84,7 @@
   	<div class="row">
   		<div class="input-group col-md-12">
   			<div class="col-md-4 col-md-offset-4">
-  				<input id="businessAddress" name="businessAddress" type="text" class="form-control" placeholder="Business Address" aria-describedby="basic-addon1">
+  				<input id="brandAddress" name="brandAddress" type="text" class="form-control" placeholder="Business Address" aria-describedby="basic-addon1">
   			</div>
   		</div>
 	</div>
@@ -74,31 +93,15 @@
 	<h4 class="inputLbl col-md-4 col-md-offset-4">*계좌번호</h4>
   	<div class="row">
   		<div class="input-group col-md-12">
-  			<div class="col-md-3 col-md-offset-4">
+  			<div class="col-md-4 col-md-offset-4">
   				<input id="sellerAccount" name="sellerAccount" type="text" class="form-control" placeholder="Account Number" aria-describedby="basic-addon1">
   			</div>
-  			<div class="col-md-1">
-  				<input id="sellerBank" name="sellerBank" type="text" class="form-control" placeholder="Bank" aria-describedby="basic-addon1">
-  			</div>
   		</div>
 	</div>
 	
+	<input type=button onclick="sendMember()" class="col-md-2 col-md-offset-4 btn btn-info" aria-expanded="false" value="판매자 신청"></input>
+	<input type="reset" class="col-md-2 btn btn-info" value="취소"></input>	 
 	
-	
-
-
-	
-	<h4 class="inputLbl col-md-4 col-md-offset-4">*연락처</h4>
-  	<div class="row">
-  		<div class="input-group col-md-12">
-  			<div class="col-md-4 col-md-offset-4">
-  				<input id="usrPhone" name="usrPhone" type="text" class="form-control" placeholder="Phone" aria-describedby="basic-addon1">
-  			</div>
-  		</div>
-	</div>
-	
-
-	<button type="button" onclick="location.href='<%=request.getContextPath()%>/index.jsp'" class="col-md-2 col-md-offset-5 btn btn-info" aria-expanded="false">판매자 신청</button>
 	<br/>
 	<br/>
 	<br/>
@@ -107,8 +110,7 @@
 	<br/>
 	</div><!-- wrapper end -->
 </div><!-- container end -->
+	</form>
 
-
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/signUpForm.js"></script>
 </body>
 </html>

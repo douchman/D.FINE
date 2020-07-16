@@ -47,7 +47,7 @@ ul{
 <body>
 
 <div class="display2">
-<img src="../imgs/img5.jpg" style="width:1920px; height:400px;">
+<img src="../imgs/img5.jpg" style="width:1920px; height:300px;">
 </div>
 	<!-- 사이드 메뉴  -->
 	<div id="sideMenu" style="float: left; position:fixed;">

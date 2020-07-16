@@ -47,7 +47,7 @@
          </p>
          <p>
             <button class="btn btn-lg btn-primary my-2 my-sm-0" type="submit"
-                onclick="location.href='<%=request.getContextPath()%>/forms/sellerSignUpForm.jsp'">Seller Upgrade &raquo;</button>
+                onclick="location.href='<%=request.getContextPath()%>/sellerPage/sellerSignUpForm.jsp'">Seller Upgrade &raquo;</button>
          </p>
       </div>
    </main>

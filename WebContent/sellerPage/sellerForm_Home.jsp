@@ -31,6 +31,6 @@
 		<legend>Mall Theme</legend>
 		<p>Current Applied Theme</p>
 		<h4>"마른 하늘에 날벼락"</h4>
-		<button class="btn btn-primary">Theme Change</button>
+		<button class="btn btn-primary" onclick="location.href='<%=request.getContextPath()%>/template/template_default.jsp'">Theme Preview</button>
 	</fieldset>
 </div>

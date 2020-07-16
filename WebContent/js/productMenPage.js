@@ -6,9 +6,7 @@ $(document).ready(function() {
 	 * $('#sellerPage_view') 에 .load 로 페이지를 불러올 것.
 	 * 위 영역은 <div> 영역.
 	 * 
-	 * */
-	
-	
+	 * */	
 });
 
 function getView(id){

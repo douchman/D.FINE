@@ -16,3 +16,23 @@ function getView(id){
 	$('#sellerPage_view').load('sellerForm_'+id+'.jsp');
 	
 }
+function chkTxtFld(txtFld, msg) {
+	let id = document.getElementById(txtFld);
+	if(id.value==""){
+		alert(msg);
+		id.focus();
+		return false;
+	}
+	return true;
+}
+function sendMember(){
+	let txtFldArr =['usrID', 'brandName', 'brandAddress', 'sellerAccount'];
+
+	for(let idx in txtFldArr){
+		if(!chkTxtFld(txtFldArr[idx], "필수 항목이 BEER있습니다."))	return;
+	}
+	
+	document.getElementById('frm').submit();
+
+}
+

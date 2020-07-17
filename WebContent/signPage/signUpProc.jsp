@@ -33,7 +33,7 @@
 		pstmt.setString(4, usrFirstName);
 		pstmt.setString(5, usrAddress);
 		pstmt.setString(6, usrPhone);
-		pstmt.setString(7, Age);
+		pstmt.setString(7, Age); 
 		pstmt.setString(8, gender);
 	
 		

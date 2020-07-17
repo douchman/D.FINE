@@ -4,6 +4,27 @@
 <!--  COKEZERO TEST-->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    <%!
+    	public void prt(String str){
+    	
+    	System.out.println(str);
+    }
+    
+    
+    %>
+    <%
+    
+    	String loginId = request.getParameter("loginId");
+    	// 파라미터로 받은 값이 올바르게 넘어 왔을경우
+    	// session 설정!
+   		if(loginId != null && !"".contentEquals(loginId))
+    		session.setAttribute("loginId", loginId);
+    	
+    	prt((String)session.getAttribute("loginId"));
+    
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +51,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
 
 <title>WELL COME TO D:FINE</title>

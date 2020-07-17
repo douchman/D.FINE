@@ -1,5 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<!-- 
+
+
+로그인 세션 로직
+
+우선 파라미터 값과 세션 값을 둘다 받는다.
+
+1. 세션 값을 먼저 검사한다.
+2. 이미 설정된 세션이 존재 할 경우는 로그인이 되어있는 상태이므로 해당 세션을 유지한다.
+3. 하지만 설정된 세션값이 없을 경우에는 로그인이 되어있지 않은 상태이므로 넘겨받은 파라미터 값을 세션 값으로 설정한다.
+4. 이렇게 하게되면  최초 index 진입시에는 세션값 검사에 문제가 없지만, -- 시행 착오 --
+5. 새로고침 또는 어떤 방법으로든 index 페이지로 재진입 할 경우 세션값의 유효성 검사 조건문에 걸리지않는다.
+6. 따라서 넘겨 받은 파라미터값 미리 세션값으로 설정하지 않고 파라미터 값의 유효성 검사를 먼저 하고나서 세션으로 설정해야 한다. 
+
+
+ -->
+
+ <%!
+    	public void prt(String str){
+    	
+    	System.out.println(str);
+    }
+    
+    
+ %>
+    <%
+    
+   	// 최초로 세션 value와 파라미터 값을 저장한다.
+   	// 헤더에서 파라미터로 받은 값을 그대로 검사 하게 되면,
+   	// 로그인이 된 상태여도 로그인 페이지에서가 아닌  타 페이지에서 index로 이동시 
+   	// 계속해서 파라미터 값을 받기 때문에 파라미터값을 기준으로 설정한 session이 해제되기때문이다.
+    String loginId = (String)session.getAttribute("loginId");
+    String reqValue = request.getParameter("loginId");
+	//prt("from inital header -> reqValue : "+reqValue);
+	//prt("from inital header -> session value : "+loginId);
+    
+    
+    // 이후에 이미 생성된 세션이있는지 먼저 검사한다.
+    // 이미 생성된 세션이 없을경우에는 
+    // 로그인 여부에 따라 넘겨받은 파라미터 값이 loginId로 설정 한다.
+    // 이미 생성된 세션이 존재한다면 파라미터 값을 받지 않고 기존에 생성된 세션을 유지한다.
+    if( loginId == null || "".contentEquals(loginId) ||"nonLogin".contentEquals(loginId) ){
+    	//prt("session value : "+loginId);
+    	// 전달 받았던 파라미터 값을 검사한다.
+    	// 값이 올바르게 넘어온 경우 (: 로그인 성공)에는 해당 값을 동일한 name 의 세션을 설정한다.
+    	// 값이 잘못된 값 ( : 로그인 실패 ) 일 경우에는 세션을 '비로그인' 으로 설정한다.
+    	if(reqValue != null && !"".contentEquals(reqValue)){
+    		session.setAttribute("loginId", reqValue);
+    		//prt("after if -> session value : "+(String)session.getAttribute("loginId"));
+    		}
+    	else{	
+    		session.setAttribute("loginId", "nonLogin");
+    		//prt("after else -> session value : "+(String)session.getAttribute("loginId"));
+    	}
+    }
+    //prt("session value : "+loginId);
+    //prt("from header -> loginID : "+(String)session.getAttribute("loginId"));
+    String loginStatus = (String)session.getAttribute("loginId");
+    %>
+    
+    
 <html>
 <head>
 <meta charset="UTF-8">
@@ -48,6 +110,7 @@ body{
 
 </head>
 <body>
+<input id="loginStatus" type="hidden" value="<%=loginStatus%>">
 <div role="navigation">
 <%-- 4281 line --%>
 <nav id="mainNavi" class="navbar navbar-default navbar-fixed-top">
@@ -78,16 +141,16 @@ body{
         <button type="submit" class="btn btn-default glyphicon glyphicon-search"></button>
       </form>
       <ul id="nav-right-side" class="nav navbar-nav navbar-right">
-      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/myPage/myPage_Home.jsp'">
-      		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> My Page
+      	<li><button type="button" class="for-login btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/myPage/myPage_Home.jsp'">
+      		 <span class="login glyphicon glyphicon-wrench" aria-hidden="true"></span> My Page
       	</button></li>
       	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/adminPage/admin_main.jsp'">
       		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Admin Page
       	</button></li>
-      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/sellerPage/sellerForm_main.jsp'">
-      		 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Seller Menu
+      	<li><button id="btnSeller" type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/sellerPage/sellerForm_main.jsp'">
+      		 <span class="for-seller glyphicon glyphicon-wrench" aria-hidden="true"></span> Seller Menu
       	</button></li>
-      	<li><button type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/signPage/signInForm.jsp'">
+      	<li><button id="btnSign" type="button" class="btn btn-default btn-lg" onclick="location.href='<%=request.getContextPath()%>/signPage/signInForm.jsp'">
       		 <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign In
       	</button></li>
       </ul>

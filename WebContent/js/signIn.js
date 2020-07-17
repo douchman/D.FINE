@@ -51,7 +51,8 @@ function login() {
 			case '2':
 				resText = '환영합니다.'; 
 				console.log('로그인성공');
-				location.href='../index.jsp?loginId = '+$('#usrID').val();
+				console.log($('#usrID').val());
+				location.href="../index.jsp?loginId="+$('#usrID').val();
 				break;
 			case '3':
 				resText = '아이디 또는 비밀번호를 올바르게 입력해주십시오.'; 

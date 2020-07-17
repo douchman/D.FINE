@@ -69,6 +69,7 @@
 
 </div>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/signIn.js?v=<%=System.currentTimeMillis()%>"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/signIn.js?ver=3"></script>
+
 </body>
 </html>

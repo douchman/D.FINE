@@ -5,24 +5,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    
-    <%!
-    	public void prt(String str){
-    	
-    	System.out.println(str);
-    }
-    
-    
-    %>
+  
     <%
     
-    	String loginId = request.getParameter("loginId");
+    	
+    	
     	// 파라미터로 받은 값이 올바르게 넘어 왔을경우
     	// session 설정!
-   		if(loginId != null && !"".contentEquals(loginId))
-    		session.setAttribute("loginId", loginId);
+   		
+   		prt("from index -> loginID : "+(String)session.getAttribute("loginId"));
+    
     	
-    	prt((String)session.getAttribute("loginId"));
     
     %>
 <!DOCTYPE html>
@@ -61,6 +54,7 @@
 <br>
 <br>
 <!-- slideShow -->
+
 <main role="main" class="container">
       <div class="jumbotron text-center">
          <p>
@@ -136,6 +130,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
 <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
 

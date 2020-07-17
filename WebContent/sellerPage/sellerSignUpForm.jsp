@@ -1,5 +1,4 @@
 <%-- signUpForm.jsp --%>
-<%-- col-md 사용해서 배치했음 근데 웹 브라우저 크기 줄이면 원하는 대로 동작이 잘 안됌 해결 가능하면 해결 바람 --%>
 <%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -54,7 +53,6 @@
 
 
 <form name="frm" id="frm" action="sellerSignUpProc.jsp" method="post">
-
 <input id="authNum" type="hidden">
 <div id="wrapper">
 <div class="container">
@@ -98,10 +96,8 @@
   			</div>
   		</div>
 	</div>
-	
 	<input type=button onclick="sendMember()" class="col-md-2 col-md-offset-4 btn btn-info" aria-expanded="false" value="판매자 신청"></input>
 	<input type="reset" class="col-md-2 btn btn-info" value="취소"></input>	 
-	
 	<br/>
 	<br/>
 	<br/>

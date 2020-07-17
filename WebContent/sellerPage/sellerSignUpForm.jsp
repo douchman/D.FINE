@@ -4,8 +4,8 @@
     pageEncoding="UTF-8"%>
     
 <%
-	String usrID = request.getParameter("usrID");
-
+	String usrID = (String)session.getAttribute("loginId");
+	
 	
 %>
 

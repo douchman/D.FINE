@@ -1,4 +1,8 @@
+<%@page import="DAO.getUsrInfoObj"%>
+<%@page import="Member.Dfinemember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<jsp:useBean id="infoGetter" class="DAO.getUsrInfoObj"></jsp:useBean>
 <!DOCTYPE html>
 
 <!-- 
@@ -28,12 +32,13 @@
  %>
     <%
     
-   	// 최초로 세션 value와 파라미터 값을 저장한다.
+ // 최초로 세션 value와 파라미터 값을 저장한다.
    	// 헤더에서 파라미터로 받은 값을 그대로 검사 하게 되면,
    	// 로그인이 된 상태여도 로그인 페이지에서가 아닌  타 페이지에서 index로 이동시 
    	// 계속해서 파라미터 값을 받기 때문에 파라미터값을 기준으로 설정한 session이 해제되기때문이다.
     String loginId = (String)session.getAttribute("loginId");
     String reqValue = request.getParameter("loginId");
+    
 	//prt("from inital header -> reqValue : "+reqValue);
 	//prt("from inital header -> session value : "+loginId);
     
@@ -46,9 +51,16 @@
     	//prt("session value : "+loginId);
     	// 전달 받았던 파라미터 값을 검사한다.
     	// 값이 올바르게 넘어온 경우 (: 로그인 성공)에는 해당 값을 동일한 name 의 세션을 설정한다.
+    	// ID가 올바르게 설정되어 정상적으로 로그인이 되었다면, 해당 아이디와 일치하는 회원데이터의 일부를 DAO로 가져와 객체로 만들어 세션으로 설정한다.
     	// 값이 잘못된 값 ( : 로그인 실패 ) 일 경우에는 세션을 '비로그인' 으로 설정한다.
     	if(reqValue != null && !"".contentEquals(reqValue)){
+    		
+    		Dfinemember usrInfo = infoGetter.getUsrInfo(reqValue);
     		session.setAttribute("loginId", reqValue);
+    		
+    		// 로그인에 성공했을경우 해당 유저 아이디를 :name 으로 하여 해당 회원의정보를 저장하고있는 임시객체를 session으로 설정한다.
+    		session.setAttribute("usrInfo", usrInfo);
+    		prt("유저 객체 아이디 :"+usrInfo.getUsrid());
     		//prt("after if -> session value : "+(String)session.getAttribute("loginId"));
     		}
     	else{	
@@ -132,11 +144,10 @@ body{
       	<!-- class="active" -->
       	<li ><a href="#"  onclick="location.href='<%=request.getContextPath()%>/product/product_main_Women.jsp'">women<span class="sr-only">(current)</span></a></li>
         <li ><a href="#" onclick="location.href='<%=request.getContextPath()%>/product/product_main_Men.jsp'">men</a></li>
-        <li><a href="#" onclick="location.href='<%=request.getContextPath()%>/product/product_main_Food.jsp'">food</a></li>
       </ul>
       <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        <div class="form-group" align="center">
+          <input type="text" style="width: 450px; margin-left: 25px;" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default glyphicon glyphicon-search"></button>
       </form>
@@ -161,6 +172,11 @@ body{
 <div>
 <br>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 </body>
 </html>
-

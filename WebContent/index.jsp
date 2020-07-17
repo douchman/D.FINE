@@ -7,6 +7,8 @@
     
 <%
 	String usrFirstName = request.getParameter("usrFirstName");
+	String usrid = (String)session.getAttribute("loginId");
+	Dfinemember usrInfo =(Dfinemember)session.getAttribute("usrInfo");
 %>
 <!DOCTYPE html>
 <html>
@@ -126,7 +128,7 @@ th{
 </div>
 
 <%-- DISPLAY4 --%>
-<p class="text-center" style="font-size: 20px;"><strong><%=usrFirstName %>위한 추천 :D</strong></p>
+<p class="text-center" style="font-size: 20px;"><strong> 당신을 위한 추천 :D</strong></p>
 <hr/>
 <table id="memberTable" class="table table-bordered table-hover">
 

@@ -1,3 +1,4 @@
+<%@page import="Member.Dfinemember"%>
 <%@page import="java.util.Set"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.HashMap"%>
@@ -9,6 +10,7 @@
     	
 	   	Map<String, String> usrInfo = new HashMap<String,String>();
     	int idCnt = 0 ;
+    	String usrId = "";
     	boolean result = true;
     	
     	PreparedStatement pstmt = null;
@@ -31,6 +33,7 @@
     		
     		rs.next();
     		
+    		usrId= rs.getString("usrID");
     		
     		usrInfo.put(rs.getString("usrID"), rs.getString("usrPW"));
     		  		
@@ -39,6 +42,7 @@
     	
     	finally{
 			if(pstmt != null)	try{pstmt.close();}catch(Exception e){}
+			// 반환된 유저아이디가 없고 , conn 이 null 아닐때 커넥션 닫기
 			if(conn !=null)	try{conn.close();}catch(Exception e){}
 			if(rs !=null)	try{rs.close();}catch(Exception e){}
 			}	
@@ -72,6 +76,48 @@
         else return "2";  
     }
     
+    /*
+    public Dfinemember selectUsrDataObj(Connection conn, String usrId){
+    	
+    	Dfinemember usrDataObj = new Dfinemember();
+    	
+		boolean result = true;
+    	
+    		PreparedStatement pstmt = null;
+    		ResultSet rs = null;
+    	
+    		String query =  "SELECT *  "+
+    				   		"FROM DfineMember "+
+    				   		"WHERE DfineMember.usrID = ? ";
+    	
+    		try{
+    			
+    			pstmt = conn.prepareStatement(query);
+    			
+    			pstmt.setString(1, usrId);
+    			
+    			rs.next();
+    			
+    			usrDataObj.setUsrid(rs.getString("usrID"));
+    			usrDataObj.setUsrfirstname(rs.getString("usrFirstName"));
+    			usrDataObj.setUsrlastname(rs.getString("usrLastName"));
+    			usrDataObj.setUsraddress(rs.getString("usrAddress"));
+    			usrDataObj.setUsrphone(rs.getString("usrPhone"));
+    			
+    			
+    			
+    		}catch(Exception e){e.printStackTrace();}
+    		
+    		finally{
+    			if(pstmt != null)	try{pstmt.close();}catch(Exception e){}
+    			if(conn !=null)	try{conn.close();}catch(Exception e){}
+    			if(rs !=null)	try{rs.close();}catch(Exception e){}
+    			}	
+        	
+    		
+    		
+    		return usrDataObj;
+    }*/
     %>
     
 
@@ -80,6 +126,8 @@
     	String usrId =  request.getParameter("usrID");
     	String usrPw =  request.getParameter("usrPW");
     	String result = "";
+    	
+    	Dfinemember memberInfo;
     	
     	// 아무것도 입력하지 않고 로그인 버튼누를때 처리
     	// 빈 값이 넘어 오면
@@ -98,6 +146,8 @@
         	// 쿼리결과가 저장되어있는 Map 데이터와 입력한 Pw 데이터로 로그인 여부결과 리턴
         	result = isValid(usrInfo, usrPw);
         	
+        		
+        		
         	
         	// 이 리턴된 로그인 페이지 입력값 유효성 검사의 결과를 찍어서 
         	// ajax 비동기 처리로 받아 로그인 페이지 내에서 처리 할 것.

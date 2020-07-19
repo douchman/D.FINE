@@ -1,0 +1,50 @@
+drop table DfineProduct
+
+
+
+CREATE TABLE DfineProduct
+(
+    productID        VARCHAR2(20)     NOT NULL, 
+    brandName        VARCHAR2(30)     NOT NULL, 
+    productName      VARCHAR2(50)     NOT NULL, 
+    productDetail    CLOB             NOT NULL, 
+    productPrice     INT              NOT NULL, 
+    productStock     INT              NOT NULL, 
+    productColor     VARCHAR2(20)     NOT NULL, 
+    productSize      VARCHAR2(20)     NOT NULL, 
+    snapshot         VARCHAR2(500)    NOT NULL, 
+    CONSTRAINT DFINEPRODUCT_PK PRIMARY KEY (productID)
+)
+
+INSERT ALL
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('101B221Lblue','TestBrand', '여름 슬랙스 반바지', '시원한 바지입니다.',23800,120,'red','L','http://localhost:8080/D.FINE/uploadFile/pants1.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('102A213Swhite','TestBrand2', '여자 흰색 셔츠', '트랜디하고 캐주얼한 여성용 셔츠',34000,72,'white','S','http://localhost:8080/D.FINE/uploadFile/womanShirt.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('102C231Mblack','TestBrand3', '도톰한 자켓', '가을용 적당한 두께의 자켓',57416,62,'black','M','http://localhost:8080/D.FINE/uploadFile/jacket.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('101B222Mblue','TestBrand4', '트렌디  긴바지', '봄 여름 가을 겨울 사계절 내내 편하게 코디 가능한 트렌디 룩 반바지',170000,17,'black','M','http://localhost:8080/D.FINE/uploadFile/pants2.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('101F251Fmono','TestBrand5', '모노톤 모자', '대두도 소화 가능한 신제품 모자',25000,70,'mono','F','http://localhost:8080/D.FINE/uploadFile/hats.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('102C233Mbage','TestBrand6', '겨울 롱 코트', '이제 시작된 여름이지만 겨울은 금방온다 지금 구매!',78100,36,'bage','M','http://localhost:8080/D.FINE/uploadFile/longcoat.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('101F252Fblue','TestBrand7', '넥타이', '캐주얼 정장, 면접 모든 장소에서 모든 스타일의 수트에 어울리는 넥타이',233333,12,'blue','F','http://localhost:8080/D.FINE/uploadFile/tie.jpg')
+into DfineProduct (productId, brandName, productName, productDetail, productPrice, productStock, productColor, productSize, snapshot)
+values('102A211Fwhite','TestBransd8', '여름을 책임질 무지 셔츠', '시원한 소재와 코튼을 적절히 합쳐 만든 독특한 촉감과 시원함을 선사하는 티',578999,96,'white','F','http://localhost:8080/D.FINE/uploadFile/tshirt.jpg')
+SELECT * FROM Dual;
+
+select * FROM DfineProduct
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,6 +4,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@page import="Dfine.shoppingCart"  %>
+<%@include file="productProc.jsp" %>
 <%!
 	public String getEncoderStr(HttpServletRequest req, String str, String encode){
 		String encodeStr = "";
@@ -14,25 +15,34 @@
 		}catch(Exception e){e.printStackTrace();}
 		return encodeStr;
 	}
+
+
+public void prt3(String str)
+{
+	System.out.println(str);
+}
 %>
+
 <%
 	String searchSelect = getEncoderStr(request, "searchSelect", "UTF-8");
 	String search = getEncoderStr(request, "search", "UTF-8");
 	String naviStr = "searchSelect="+searchSelect+"&search="+search+"&";
 
 	
-	List<Dfineproduct> productLst = (List<Dfineproduct>)session.getAttribute("productLst");
-	String url = request.getContextPath()+"/Board/boardProc.jsp?"+naviStr+"curPage=boardForm&pageNum=";
-	String path = request.getContextPath()+"/Board/boardProc.jsp?curPage=boardForm&pageNum="+1;
+	//List<Dfineproduct> productLst = (List<Dfineproduct>)session.getAttribute("productLst");
+	prt3("product_form_men!");
+	List<Dfineproduct> productLst = getProduct();
+	//String url = request.getContextPath()+"/Board/boardProc.jsp?"+naviStr+"curPage=boardForm&pageNum=";
+	//String path = request.getContextPath()+"/Board/boardProc.jsp?curPage=boardForm&pageNum="+1;
 	
 
 	
-	int totalPage = (int)request.getAttribute("totalPage");
-	int blockSize = (int)request.getAttribute("blockSize");
-	int pageNum = (int)request.getAttribute("pageNum");
+	//int totalPage = (int)request.getAttribute("totalPage");
+	//int blockSize = (int)request.getAttribute("blockSize");
+	//int pageNum = (int)request.getAttribute("pageNum");
 	
-	int pageCnt = totalPage / blockSize;
-	if(	totalPage % blockSize>0 )	pageCnt++;
+	//int pageCnt = totalPage / blockSize;
+	//if(	totalPage % blockSize>0 )	pageCnt++;
 %>
 <style>
 input {
@@ -77,7 +87,7 @@ th{
   <li role="presentation"><a href="#">소분류3</a></li>
 
 </ul>
-</div>
+</div></div>
 
 
 <%-- PRODUCT DISPLAY1 --%>
@@ -133,7 +143,7 @@ th{
 </form>
 <div id="div_to_append_to">
 </div>
-</div>
+
 </center>
 
 <script>

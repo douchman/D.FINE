@@ -7,16 +7,18 @@
 <%@ include file="../common/dbConn.jspf"%>
     
 <%!
-public List<Dfineproduct> getProduct(Connection conn, int start, int end, String conditional){
+public List<Dfineproduct> getProduct(){
+	
+	Connection conn = getConn("localhost", "1521", "xe");
 		PreparedStatement pstmt = null;
-		String sql ="";
+		String sql ="SELECT * FROM DfineProduct";
 
 		ResultSet rs = null;
-		List<Dfineproduct> productLst = new ArrayList<>();
+		List<Dfineproduct> productLst = new ArrayList<Dfineproduct>();
 		try{
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, start);
-			pstmt.setInt(2, end);
+			//pstmt.setInt(1, start);
+			//pstmt.setInt(2, end);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()){
@@ -41,6 +43,8 @@ public List<Dfineproduct> getProduct(Connection conn, int start, int end, String
 			if(pstmt != null)	try{pstmt.close();}catch(Exception e){}
 			if(conn !=null)	try{conn.close();}catch(Exception e){}
 		}
+		//System.out.println("productProc 에서 만든 리스트 객체 :"+productLst);
+		
 		return productLst;
 	}
 %>

@@ -18,10 +18,10 @@ $(document).ready(function() {
 	$('#btnSign').on('click',function(){
 		
 		if($(this).hasClass('has-login')){
-			location.href="signPage/signOutProc.jsp?usrId="+$('#loginStatus').val();
+			location.href="/D.FINE/signPage/signOut.jsp";
 		}
 		else
-			location.href="	signPage/signInForm.jsp";
+			location.href="/D.FINE/signPage/signInForm.jsp";
 		
 	})
 })

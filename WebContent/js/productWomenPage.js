@@ -1,4 +1,5 @@
 $(document).ready(function() {	
+	console.log('chk');
 	$('#product_women_view').load('product_form_women.jsp');
 	
 	/* 사이드메뉴에서 페이지 호출시 이쪽에서 처리해서 

@@ -9,6 +9,8 @@
 	String usrFirstName = request.getParameter("usrFirstName");
 	String usrid = (String)session.getAttribute("loginId");
 	Dfinemember usrInfo =(Dfinemember)session.getAttribute("usrInfo");
+	
+	//prt(request.getContextPath());
 %>
 <!DOCTYPE html>
 <html>

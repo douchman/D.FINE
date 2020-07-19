@@ -1,7 +1,16 @@
 <%-- sellerForm.jsp --%>
 <%-- 판매자 페이지 --%>
+<%@page import="com.sun.scenario.effect.impl.prism.PrTexture"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+	<%!
+	
+		public void prt2(String str)
+		{
+			System.out.println(str);
+		}
+	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +55,7 @@ ul{
 </style>
 </head>
 <body>
-
+<%prt2("product_main_men !");%>
 	<!-- 사이드 메뉴  -->
 	<div id="sideMenu" style="float: left; position:fixed;">
 		<h4 class="glyphicon glyphicon-align-justify"> MEN </h4>
@@ -76,7 +85,7 @@ ul{
 	<!-- 뷰 필드 -->
 	<div id="product_men_view" class="container">
 		
-		
+		<jsp:include page="product_form_men.jsp"></jsp:include>
 
 	</div>
 
@@ -110,12 +119,6 @@ ul{
 	<br />
 
 
-<script>
-
-
-
-
-</script>
-<script src="<%=request.getContextPath()%>/js/productMenPage.js"></script>
+<script src="<%=request.getContextPath()%>/js/productMenPage.js?ver=2"></script>
 </body>
 </html>

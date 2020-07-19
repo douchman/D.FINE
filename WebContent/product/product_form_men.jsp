@@ -24,6 +24,7 @@ public void prt3(String str)
 %>
 
 <%
+	int idx =0;
 	String searchSelect = getEncoderStr(request, "searchSelect", "UTF-8");
 	String search = getEncoderStr(request, "search", "UTF-8");
 	String naviStr = "searchSelect="+searchSelect+"&search="+search+"&";
@@ -32,6 +33,7 @@ public void prt3(String str)
 	//List<Dfineproduct> productLst = (List<Dfineproduct>)session.getAttribute("productLst");
 	prt3("product_form_men!");
 	List<Dfineproduct> productLst = getProduct();
+	session.setAttribute("prodLst", productLst);
 	//String url = request.getContextPath()+"/Board/boardProc.jsp?"+naviStr+"curPage=boardForm&pageNum=";
 	//String path = request.getContextPath()+"/Board/boardProc.jsp?curPage=boardForm&pageNum="+1;
 	
@@ -71,6 +73,12 @@ th{
 #memberWrapper{
 	padding-left: 150px;
 }
+
+.snapImg{
+	width: 200px;
+	height: auto; 
+	
+}
 </style>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/productMenPage.js"></script>
 <form id="frm" action="<%=request.getContextPath()%>/index.jsp" method="post">
@@ -92,29 +100,37 @@ th{
 
 <%-- PRODUCT DISPLAY1 --%>
 <table id="memberTable" class="table table-bordered table-hover">
+
 <%
 	for(Dfineproduct product: productLst){
+		if(idx%4 == 0){
+			out.print("<tr>");
+		}
 %>		
-<tr>
 	<td>
 		<div class="thumbnail">
-			<img src="<%=product.getSnapshot()%>" alt="...">
+			<img class="snapImg" width="200" height="200" src="<%=product.getSnapshot()%>" alt="...">
 			<div class="caption">
-				<h3><%=product.getProductname()%>></h3>
+				<h3><%=product.getProductname()%></h3>
 				<p><a href="<%=request.getContextPath()%>/?"><%=product.getBrandname()%></a></p>
 				<p><%=product.getProductprice()%>원</p>
 
 				<p>
 					<a href="#" class="btn btn-primary glyphicon glyphicon-sunglasses" role="button">장바구니 추가</a>
-					<a href="#" class="btn btn-primary" role="button">구매하기</a>
+					<a href="product_detail.jsp?idx=<%=idx%>" class="btn btn-primary" role="button">구매하기</a>
 				</p>
 			</div>
 		</div>
 	</td>
-</tr>
+
 <%
+	if(idx == 3 || idx%4==3){
+		out.print("</tr>");
+	}
+idx++;
 	}
 %>
+
 </table>
 	<!-- 페이징 -->
 <%-- <%=CommonTools.getNavi(pageNum, blockSize, totalPage, url)%>

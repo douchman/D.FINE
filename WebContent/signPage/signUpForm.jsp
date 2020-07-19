@@ -51,7 +51,7 @@
 	<a class="col-md-2 col-md-offset-5" href="<%=request.getContextPath()%>/index.jsp">
 		<img src="<%=request.getContextPath()%>/imgs/logo.png">
 	</a>
-	<form action="<%=request.getContextPath()%>/signPage/signUpProc.jsp">
+	<form action="<%=request.getContextPath()%>/signPage/signUpProc.jsp" method="post">
 	<div class="row">
 	<h4 class="inputLbl col-md-4 col-md-offset-4">*ID(Email)</h4>
 	<div class="input-group col-md-12">

@@ -1,13 +1,44 @@
 <%-- productDetail Top .jspf --%>
-
+<%@page import="java.util.ArrayList"%>
+<%@page import="Dfine.Dfineproduct"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 
-</body>
-</html>
+
+<%
+request.setCharacterEncoding("UTF-8");
+List<Dfineproduct> prodLst = (ArrayList<Dfineproduct>) session.getAttribute("prodLst");
+
+int idx  = Integer.parseInt(request.getParameter("idx"));
+idx=0;
+%>
+
+
+	<div class="stepTitle">
+		<span>물품 정보</span>
+	</div>
+	<div class="row">
+		<div id="snapShot" class="col-md-2">
+			<!-- img 는 그저 미리 보기 용임 절대 현혹되지 말 것. -->
+			<img id="product_snapShot"
+				src="<%=prodLst.get(idx).getSnapshot()%>" alt="..."
+				class="img-thumbnail">
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="input-group" style="margin-bottom: 15px;">
+				<label>물품 이름</label><span><%=prodLst.get(idx).getProductname()%></span>
+			</div>
+	
+
+			<div class="input-group" style="margin-bottom: 15px;">
+				<label>가격 </label> <span><%=prodLst.get(idx).getProductprice()%></span>
+			</div>
+
+		</div>
+
+
+
+		</div>
+

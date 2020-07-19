@@ -94,6 +94,7 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  		<url-pattern>/product/product_main_Men.jsp</url-pattern>
  		<url-pattern>/product/product_main_Women.jsp</url-pattern>
  		<url-pattern>/product/product_main_Food.jsp</url-pattern>
+ 		<url-pattern>/product/product_detail.jsp</url-pattern>
  		<url-pattern>/product/shoppingCart.jsp</url-pattern>
  		<url-pattern>/template/template_default.jsp</url-pattern>
  		<!-- header -->
